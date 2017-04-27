@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <file url="file://$PROJECT_DIR$/src/Easings.class" />
+      <file url="file://$PROJECT_DIR$/src/Border.class" />
+      <file url="file://$PROJECT_DIR$/src/Kugel.class" />
+      <file url="file://$PROJECT_DIR$/src/Kugel$1.class" />
+      <file url="file://$PROJECT_DIR$/src/DrawThread.class" />
+      <file url="file://$PROJECT_DIR$/src/KugelBild.class" />
+      <file url="file://$PROJECT_DIR$/src/Vector2D.class" />
+    </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />

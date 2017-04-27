@@ -1,0 +1,18 @@
+$PKGLINE
+import java.applet.Applet;
+import java.awt.*;
+
+// Applet, das die SuMAnwendung erzeugt.
+
+
+public class $CLASSNAME extends Applet
+{
+    SuMAnwendung hatSuMAnwendung;
+
+    public $CLASSNAME()
+    {
+        super();
+        hatSuMAnwendung = new SuMAnwendung();
+        hatSuMAnwendung.fuehreAus();
+    }
+}
