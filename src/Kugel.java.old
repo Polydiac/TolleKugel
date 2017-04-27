@@ -1,0 +1,90 @@
+/**
+ * Created by Sören on 30.03.2017.
+ */
+
+import sum.kern.*;
+import java.awt.Color;
+
+public class Kugel {
+    Buntstift st;
+    Bildschirm bs;
+    double rad;
+    double x,y;
+    double richt;
+    double speed;
+
+    public Kugel(double prad, double px, double py, double pricht, double speed, Color c, Bildschirm pbs){
+        bs = pbs;
+        this.speed = speed;
+        st = new Buntstift((Fenster) pbs);
+        rad = prad;
+        st.dreheBis(pricht);
+        x = px;
+        y = py;
+        st.setzeFuellmuster(1);
+        st.setzeFarbe(c);
+        richt = pricht;
+    }
+    public void draw(){
+        st.bewegeBis(x,y);
+        st.zeichneKreis(rad);
+    }
+    public void del(){
+        st.radiere();
+        draw();
+    }
+    public void bewege(){
+        this.bewege(this.speed);
+
+    }
+    public void bewege(double weite){
+        st.bewegeUm(weite);
+        x = st.hPosition();
+        y = st.vPosition();
+        if(x >= bs.breite() - rad){
+            richt = richtUmkehren(richt, Border.RIGHT);
+            st.dreheBis(richt);
+            st.bewegeUm(weite);
+        }
+        else if (y >= bs.hoehe() - rad){
+            richt = richtUmkehren(richt, Border.BOTTOM);
+            st.dreheBis(richt);
+            st.bewegeUm(weite);
+        }
+        else if (x <= rad ){
+            richt = richtUmkehren(richt, Border.LEFT);
+            st.dreheBis(richt);
+            st.bewegeUm(weite);
+        }
+        else if (y <= rad){
+            richt = richtUmkehren(richt, Border.TOP);
+            st.dreheBis(richt);
+            st.bewegeUm(weite);
+            
+        }
+        st.normal();
+        draw();
+
+    }
+
+    private static double richtUmkehren(double pricht, Border br){
+        /*switch(br) {
+            case TOP:
+                ppricht = 360-ppricht;
+                break;
+            case BOTTOM:
+                ppricht = ppricht - 180;
+                break;
+            case RIGHT:
+                ppricht = 
+                break;
+            case LEFT:
+                break;
+        }*/
+        pricht = pricht + 180.0;
+        if(pricht > 360){
+            pricht = pricht - 360;
+        }
+        return pricht;
+    }
+}
