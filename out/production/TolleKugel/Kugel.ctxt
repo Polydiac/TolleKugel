@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=prad\ px\ py\ pricht\ speed\ c\ pbs
+comment0.target=Kugel(double,\ double,\ double,\ double,\ double,\ java.awt.Color,\ sum.kern.Bildschirm)
+comment1.params=
+comment1.target=void\ draw()
+comment2.params=
+comment2.target=void\ del()
+comment3.params=
+comment3.target=void\ bewege()
+comment4.params=weite
+comment4.target=void\ bewege(double)
+comment5.params=b
+comment5.target=double\ richtUmkehren(Border)
+numComments=6

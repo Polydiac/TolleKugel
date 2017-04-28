@@ -7,6 +7,8 @@ import sum.kern.*;
 import java.awt.Color;
 
 public class Kugel {
+    
+    boolean hide = false;
     Buntstift st;
     Bildschirm bs;
     double rad;
@@ -34,6 +36,19 @@ public class Kugel {
     public void del(){
         st.radiere();
         draw();
+        st.normal();
     }
-
+    
+    public boolean checkCollision(Kugel k){
+        if(Math.sqrt(Math.pow(Math.abs(this.x - k.x),2)+ Math.pow(Math.abs(this.y - k.y),2)) < k.rad + this.rad){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
+    public void hideK(){
+        this.hide = true;
+    }
 }

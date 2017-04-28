@@ -7,6 +7,7 @@ import java.awt.*;
  */
 public class GuteKugel extends Kugel {
     double richt;
+    double dur,change,start;
     public GuteKugel(double prad, double px, double py, double pricht, double speed, Color c, Bildschirm pbs) {
         super(prad, px, py, speed, c, pbs);
         richt = pricht;
@@ -123,5 +124,11 @@ public class GuteKugel extends Kugel {
                 return 0;
         }
 
+    }
+    public void toggleAnim(int startFrame){
+        
+    }
+    public void animateOut(int frame){
+        
     }
 }

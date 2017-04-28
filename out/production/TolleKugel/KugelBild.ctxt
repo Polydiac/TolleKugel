@@ -8,5 +8,5 @@ comment2.target=void\ delete()
 comment3.params=args
 comment3.target=void\ main(java.lang.String[])
 comment4.params=kugelCount\ pbs
-comment4.target=GuteKugel[]\ getKugelArray(int,\ sum.kern.Fenster)
+comment4.target=Kugel[]\ getKugelArray(int,\ sum.kern.Fenster)
 numComments=5

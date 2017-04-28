@@ -1,8 +1,8 @@
 import sum.kern.Bildschirm;
 import sum.kern.Tastatur;
 
+import java.lang.Math;
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 /**
@@ -26,8 +26,8 @@ public class BoeseKugel extends Kugel{
 
     protected Vector2D getDirection(){
         Vector2D dir = new Vector2D(0,0);
-        Character[] movKeys = {'w', 'a', 's', 'd'};
-        ArrayList keys = getKeys();
+        //Character[] movKeys = {'w', 'a', 's', 'd'};
+        ArrayList<Character> keys = getKeys();
         /*for(int i=0; i<keys.size(); i++){
             for(int x=0; x<movKeys.length; x++){
                 if(keys.get(i)==movKeys[x]){
@@ -36,23 +36,23 @@ public class BoeseKugel extends Kugel{
             }
             keys.remove(i);
         }*/
-        System.out.println(keys);
+        //System.out.println(keys);
         for(int i=0; i<keys.size();i++){
             switch((char)keys.get(i)){
                 case 'w':
-                    dir.plus(new Vector2D(0, this.speed));
+                    dir = dir.plus(new Vector2D(0, -this.speed));
                     break;
                 case 's':
-                    dir.plus(new Vector2D(0, -this.speed));
+                    dir = dir.plus(new Vector2D(0, this.speed));
                     break;
                 case 'a':
-                    dir.plus(new Vector2D(-this.speed, 0));
+                    dir = dir.plus(new Vector2D(-this.speed, 0));
                     break;
                 case 'd':
-                    dir.plus(new Vector2D(this.speed, 0));
+                    dir = dir.plus(new Vector2D(this.speed, 0));
                     break;
                 default:
-                    dir.plus(new Vector2D(0,0));
+                    dir = dir.plus(new Vector2D(0,0));
             }
         }
         if(dir.x!=0&&dir.y!=0){
@@ -60,15 +60,15 @@ public class BoeseKugel extends Kugel{
         }
 
 
-        System.out.println(dir);
+        //System.out.println(dir);
 
         return dir;
 
     }
 
     private ArrayList<Character> getKeys(){
-        ArrayList keys = new ArrayList();
-        ArrayList pressed = new ArrayList();
+        ArrayList<Character> keys = new ArrayList();
+        ArrayList<Character> pressed = new ArrayList();
         while(this.tast.wurdeGedrueckt()){
             pressed.add(this.tast.zeichen());
             this.tast.weiter();
@@ -78,7 +78,7 @@ public class BoeseKugel extends Kugel{
                 keys.add(pressed.get(i));
             }
         }
-        System.out.println(keys);
+        //System.out.println(keys);
         return keys;
 
     }
@@ -86,8 +86,11 @@ public class BoeseKugel extends Kugel{
     public void bewege(Vector2D richt){
         this.x = this.x + richt.getX();
         this.y = this.y + richt.getY();
+        this.st.bewegeBis(this.x, this.y);
     }
-
+    
+    
+    
 
 
 }
