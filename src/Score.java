@@ -25,7 +25,7 @@ public class Score
         score = sc;
     }
     public void incScore(){
-        setScore(score + 1);
+        score ++;
     }
     public void draw(){
         st.bewegeBis(x,y);

@@ -1,87 +1,93 @@
 import sum.kern.Bildschirm;
-import sum.kern.Tastatur;
 
-import java.lang.Math;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 /**
  * Created by Soeren on 27.04.2017.
  */
 public class BoeseKugel extends Kugel{
-    Tastatur tast;
+    KeyboardListener keyboard;
     ArrayList prevKeys;
+    boolean speedUp;
+    double currentSpeed;
+    int startFrame;
 
-    public BoeseKugel(double prad, double px, double py, double speed, Color c, Bildschirm pbs) {
+    public BoeseKugel(double prad, double px, double py, double speed, Color c, Bildschirm pbs, KeyboardListener kb) {
         super(prad, px, py, speed, c, pbs);
-        this.tast = new Tastatur();
+        this.keyboard = kb;
+        currentSpeed = 0.01;
+
         this.draw();
     }
 
     public void update(int frame){
-
-        this.bewege(getDirection());
+        if(speedUp){
+            int duration = 10;
+            if(frame-startFrame <= duration){
+                this.currentSpeed = Easings.sineEaseInOut(frame-startFrame, 0.01f, (float)this.speed, duration);
+            }
+        }
+        this.bewege(getDirection(frame));
         this.draw();
     }
 
-    protected Vector2D getDirection(){
+    protected Vector2D getDirection(int frame){
+
         Vector2D dir = new Vector2D(0,0);
-        //Character[] movKeys = {'w', 'a', 's', 'd'};
-        ArrayList<Character> keys = getKeys();
-        /*for(int i=0; i<keys.size(); i++){
-            for(int x=0; x<movKeys.length; x++){
-                if(keys.get(i)==movKeys[x]){
-                    continue;
-                }
-            }
-            keys.remove(i);
-        }*/
-        //System.out.println(keys);
-        for(int i=0; i<keys.size();i++){
-            switch((char)keys.get(i)){
-                case 'w':
-                    dir = dir.plus(new Vector2D(0, -this.speed));
-                    break;
-                case 's':
-                    dir = dir.plus(new Vector2D(0, this.speed));
-                    break;
-                case 'a':
-                    dir = dir.plus(new Vector2D(-this.speed, 0));
-                    break;
-                case 'd':
-                    dir = dir.plus(new Vector2D(this.speed, 0));
-                    break;
-                default:
-                    dir = dir.plus(new Vector2D(0,0));
+
+        Hashtable keys = keyboard.getTable();
+
+        boolean anyKey = false;
+
+        if((boolean)keys.get((Character) 'w')){
+            dir = dir.plus(new Vector2D(0, -this.currentSpeed));
+            anyKey =true;
+            if (!speedUp) {
+                startFrame = frame;
+                speedUp = true;
             }
         }
+        if((boolean)keys.get((Character) 'a')){
+            dir = dir.plus(new Vector2D(-this.currentSpeed, 0));
+            anyKey =true;
+            if (!speedUp) {
+                startFrame = frame;
+                speedUp = true;
+            }
+        }
+        if((boolean)keys.get((Character) 's')){
+            dir = dir.plus(new Vector2D(0, this.currentSpeed));
+            anyKey =true;
+            if (!speedUp) {
+                startFrame = frame;
+                speedUp = true;
+            }
+        }
+        if((boolean)keys.get((Character) 'd')){
+            dir = dir.plus(new Vector2D(this.currentSpeed, 0));
+            anyKey =true;
+            if (!speedUp) {
+                startFrame = frame;
+                speedUp = true;
+            }
+        }
+
         if(dir.x!=0&&dir.y!=0){
-            dir.setR(this.speed);
+            dir.setR(this.currentSpeed);
+
         }
-
-
-        //System.out.println(dir);
+        if(!anyKey){
+            speedUp = false;
+            startFrame = 0;
+            currentSpeed = 0.1;
+        }
 
         return dir;
 
     }
 
-    private ArrayList<Character> getKeys(){
-        ArrayList<Character> keys = new ArrayList();
-        ArrayList<Character> pressed = new ArrayList();
-        while(this.tast.wurdeGedrueckt()){
-            pressed.add(this.tast.zeichen());
-            this.tast.weiter();
-        }
-        for(int i = 0; i < pressed.size(); i++){
-            if(!keys.contains(pressed.get(i))){
-                keys.add(pressed.get(i));
-            }
-        }
-        //System.out.println(keys);
-        return keys;
-
-    }
 
     public void bewege(Vector2D richt){
         this.x = this.x + richt.getX();

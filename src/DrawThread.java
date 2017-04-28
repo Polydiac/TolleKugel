@@ -2,9 +2,7 @@
 
 import sum.kern.*;
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferStrategy;
 
 
 /**
@@ -14,6 +12,7 @@ public abstract class DrawThread {
 
     protected Fenster bs;
     protected Tastatur ts;
+    public KeyboardListener kb;
     int frame = 0;
     int framerate = 25;
     long interval;
@@ -33,6 +32,11 @@ public abstract class DrawThread {
         framerate = pframerate;
         interval = 1000 / framerate;
 
+        bs.setFocusable(true);
+        this.kb = new KeyboardListener();
+        bs.addKeyListener(kb);
+        bs.requestFocus();
+
         bs.setIgnoreRepaint(true);
         bs.createBufferStrategy(2);
 
@@ -47,13 +51,12 @@ public abstract class DrawThread {
         bs.setBackground(new Color(255, 255, 255));
         init();
         while(!(ts.wurdeGedrueckt()&& ts.zeichen() == Zeichen.ESCAPE)){
-            //bs.getBu
             long startTime = System.nanoTime();
             this.delete();
             this.draw(frame);
 
-            bs.getBufferStrategy().show();
             if(bs != null){
+                bs.getBufferStrategy().show();
                 bs.zeichneDich();
             }
             long stopTime = System.nanoTime() - startTime;

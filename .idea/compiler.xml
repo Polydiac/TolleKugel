@@ -9,6 +9,8 @@
       <file url="file://$PROJECT_DIR$/src/DrawThread.class" />
       <file url="file://$PROJECT_DIR$/src/KugelBild.class" />
       <file url="file://$PROJECT_DIR$/src/Vector2D.class" />
+      <file url="file://$PROJECT_DIR$/src/BoeseKugel.class" />
+      <file url="file://$PROJECT_DIR$/src/Score.class" />
     </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>

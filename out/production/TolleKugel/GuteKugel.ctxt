@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=prad\ px\ py\ pricht\ speed\ c\ pbs
+comment0.target=GuteKugel(double,\ double,\ double,\ double,\ double,\ java.awt.Color,\ sum.kern.Bildschirm)
+comment1.params=
+comment1.target=void\ bewege()
+comment2.params=weite
+comment2.target=void\ bewege(double)
+comment3.params=
+comment3.target=void\ draw()
+comment4.params=b
+comment4.target=double\ richtUmkehren(Border)
+comment5.params=startFrame
+comment5.target=void\ toggleAnim(int)
+comment6.params=frame
+comment6.target=void\ animateOut(int)
+numComments=7
