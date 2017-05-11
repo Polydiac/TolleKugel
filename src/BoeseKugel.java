@@ -3,7 +3,6 @@ import sum.kern.Bildschirm;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Hashtable;
-
 /**
  * Created by Soeren on 27.04.2017.
  */
@@ -18,7 +17,6 @@ public class BoeseKugel extends Kugel{
         super(prad, px, py, speed, c, pbs);
         this.keyboard = kb;
         currentSpeed = 0.01;
-
         this.draw();
     }
 

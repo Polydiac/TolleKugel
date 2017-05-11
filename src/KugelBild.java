@@ -1,4 +1,3 @@
-//import java.lang.arry
 import sum.kern.*;
 import java.util.Random;
 import java.awt.Color;

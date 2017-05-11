@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="SuMWin/SuMWin 7.3.1/Bibs/in extensions/SuMAkzeptor.jar"/>
+	<classpathentry kind="lib" path="SuMWin/SuMWin 7.3.1/Bibs/in extensions/SuMGenerator.jar"/>
+	<classpathentry kind="lib" path="SuMWin/SuMWin 7.3.1/Bibs/in extensions/SuMTransduktor.jar"/>
+	<classpathentry kind="lib" path="SuMWin/SuMWin 7.3.1/Bibs/in userlib/mysql-connector-java-5.1.15-bin.jar"/>
+	<classpathentry kind="lib" path="SuMWin/SuMWin 7.3.1/Bibs/in userlib/SuMEreignis.jar"/>
+	<classpathentry kind="lib" path="SuMWin/SuMWin 7.3.1/Bibs/in userlib/SuMKern.jar"/>
+	<classpathentry kind="lib" path="SuMWin/SuMWin 7.3.1/Bibs/in userlib/SuMKomponenten.jar"/>
+	<classpathentry kind="lib" path="SuMWin/SuMWin 7.3.1/Bibs/in userlib/SuMMultimedia.jar"/>
+	<classpathentry kind="lib" path="SuMWin/SuMWin 7.3.1/Bibs/in userlib/SuMNetz.jar"/>
+	<classpathentry kind="lib" path="SuMWin/SuMWin 7.3.1/Bibs/in userlib/SuMSQL.jar"/>
+	<classpathentry kind="lib" path="SuMWin/SuMWin 7.3.1/Bibs/in userlib/SuMStrukturen.jar"/>
+	<classpathentry kind="lib" path="SuMWin/SuMWin 7.3.1/Bibs/in userlib/SuMWerkzeuge.jar"/>
+	<classpathentry kind="lib" path="SuMWin/SuMWin 7.3.1/Bibs/in userlib/xpp3_min-1.1.3.4.I.jar"/>
+	<classpathentry kind="lib" path="SuMWin/SuMWin 7.3.1/Bibs/in userlib/xstream-1.1.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="out/production/TolleKugel"/>
+	<classpathentry kind="src" path="src"/>
+</classpath>

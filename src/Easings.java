@@ -24,103 +24,72 @@ public class Easings {
         switch(type){
             case SINE_IN:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case SINE_OUT:
                 return sineEaseOut(time, this.startValue, this.change, this.duration);
-                break;
             case SINE_IN_OUT:
                 return sineEaseInOut(time, this.startValue, this.change, this.duration);
-                break;
             case QUINT_IN:
                 return quintEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case QUINT_OUT:
                 return quintEaseOut(time, this.startValue, this.change, this.duration);
-                break;
             case QUINT_IN_OUT:
                 return quintEaseInOut(time, this.startValue, this.change, this.duration);
-                break;
             case QUART_IN:
                 return quartEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case QUART_OUT:
                 return quartEaseOut(time, this.startValue, this.change, this.duration);
-                break;
             case QUART_IN_OUT:
                 return quartEaseInOut(time, this.startValue, this.change, this.duration);
-                break;
             case QUAD_IN:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case QUAD_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case QUAD_IN_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case LINEAR_IN:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case LINEAR_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case LINEAR_IN_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case EXPO_IN:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case EXPO_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case EXPO_IN_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case ELASTIC_IN:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case ELASTIC_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case ELASTIC_IN_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case CUBIC_IN:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case CUBIC_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case CUBIC_IN_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case CIRC_IN:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case CIRC_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case CIRC_IN_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case BOUNCE_IN:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case BOUNCE_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case BOUNCE_IN_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case BACK_IN:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case BACK_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
             case BACK_IN_OUT:
                 return sineEaseIn(time, this.startValue, this.change, this.duration);
-                break;
+            default:
+                return 0.0;
         }
     }
 

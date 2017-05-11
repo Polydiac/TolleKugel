@@ -25,7 +25,7 @@ public class GuteKugel extends Kugel {
         st.bewegeUm(weite);
         x = st.hPosition();
         y = st.vPosition();
-        if(x >= bs.breite() - rad){
+        if(x >= (bs.breite() - rad)){
             richt = richtUmkehren( Border.RIGHT);
             st.dreheBis(richt);
             ri = true;
@@ -106,6 +106,7 @@ public class GuteKugel extends Kugel {
                 break;
         }*/
         double r = this.richt;
+        //System.out.println(b);
         switch (b){
             case TOP:
                 if(r > 90&& r < 180){
@@ -123,7 +124,7 @@ public class GuteKugel extends Kugel {
                     return 180 - (r - 180);
                 }
                 break;
-            case LEFT:
+            case RIGHT:
                 if(r > 0&& r < 90){
                     return 180 - r;
                 }
@@ -131,7 +132,7 @@ public class GuteKugel extends Kugel {
                     return 270 - (r - 270);
                 }
                 break;
-            case RIGHT:
+            case LEFT:
                 if(r > 180&& r < 270){
                     return (270 - r)+270;
                 }
@@ -140,7 +141,8 @@ public class GuteKugel extends Kugel {
                 }
                 break;
         }
-        return 0;
+        //System.out.println("Attention attention " + b);
+        return r;
         /*
 
         normal.normalize();
