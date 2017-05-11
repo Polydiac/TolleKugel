@@ -70,43 +70,7 @@ public class GuteKugel extends Kugel {
     }
 
     private double richtUmkehren( Border b){
-        /*Vector2D normal;
-        switch(b){
-            case TOP:
-                normal = new Vector2D(0, -1);
-                break;
-            case BOTTOM:
-                normal = new Vector2D(0, 1);
-                break;
-            case LEFT:
-                normal = new Vector2D(-1, 0);
-                break;
-            case RIGHT:
-                normal = new Vector2D(1, 0);
-                break;
-            default:
-                normal = null;
-        }*/
-        /*
-        Vector2D ang = new Vector2D((float)Math.cos(Math.toRadians(this.richt)), (float)Math.sin(Math.toRadians(this.richt)));
-        ang = ang.normalize();
-
-        switch(b){
-            case TOP:
-                ang.y = ang.y*-1;
-                break;
-            case BOTTOM:
-                ang.y = ang.y*-1;
-                break;
-            case LEFT:
-                ang.x = ang.x*-1;
-                break;
-            case RIGHT:
-                ang.x = ang.x*-1;
-                break;
-        }*/
         double r = this.richt;
-        //System.out.println(b);
         switch (b){
             case TOP:
                 if(r > 90&& r < 180){
@@ -141,46 +105,7 @@ public class GuteKugel extends Kugel {
                 }
                 break;
         }
-        //System.out.println("Attention attention " + b);
         return r;
-        /*
-
-        normal.normalize();
-        double angle = Math.toDegrees(Math.acos(ang.dot(normal)/1))*2;
-        double reflection = (360-(angle*2))/2;
-        double r = this.richt;
-        switch (b){
-            case TOP:
-                if(r > 90&& r < 180){
-                    return reflection;
-                }
-                else{
-                    return -reflection;
-                }
-            case BOTTOM:
-                if(r > 270&& r < 360){
-                    return reflection;
-                }
-                else{
-                    return -reflection;
-                }
-            case LEFT:
-                if(r > 0&& r < 90){
-                    return reflection;
-                }
-                else{
-                    return -reflection;
-                }
-            case RIGHT:
-                if(r > 180&& r < 270){
-                    return reflection;
-                }
-                else{
-                    return -reflection;
-                }
-            default:
-                return 0;
-        }*/
 
     }
     public void toggleAnim(int startFrame){

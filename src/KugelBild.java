@@ -14,7 +14,7 @@ public class KugelBild extends DrawThread{
         spawnEntities = 2000;
         player = new BoeseKugel(30,500, 500, 20, Color.BLACK, this.bs, kb);
         kugeln = getKugelArray(spawnEntities, this.bs);
-        scoreboard = new Score(900, 20, Color.GREEN);
+        scoreboard = new Score(900, 20, Color.GREEN, 25);
     }
     
     public void draw(int frame){

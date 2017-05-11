@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a9af7a8-b1e9-43d7-9a96-ab5314f1b365" name="Default" comment="">
+    <list default="true" id="4a9af7a8-b1e9-43d7-9a96-ab5314f1b365" name="Default" comment="Added Player; currently not working.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tags" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TolleKugel/BoeseKugel.class" afterPath="$PROJECT_DIR$/out/production/TolleKugel/BoeseKugel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TolleKugel/Border.class" afterPath="$PROJECT_DIR$/out/production/TolleKugel/Border.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TolleKugel/Direction.class" afterPath="$PROJECT_DIR$/out/production/TolleKugel/Direction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TolleKugel/DrawThread.class" afterPath="$PROJECT_DIR$/out/production/TolleKugel/DrawThread.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TolleKugel/Easings.class" afterPath="$PROJECT_DIR$/out/production/TolleKugel/Easings.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TolleKugel/GuteKugel$1.class" afterPath="$PROJECT_DIR$/out/production/TolleKugel/GuteKugel$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TolleKugel/GuteKugel.class" afterPath="$PROJECT_DIR$/out/production/TolleKugel/GuteKugel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TolleKugel/KeyboardListener.class" afterPath="$PROJECT_DIR$/out/production/TolleKugel/KeyboardListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TolleKugel/Kugel.class" afterPath="$PROJECT_DIR$/out/production/TolleKugel/Kugel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TolleKugel/KugelBild.class" afterPath="$PROJECT_DIR$/out/production/TolleKugel/KugelBild.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TolleKugel/Score.class" afterPath="$PROJECT_DIR$/out/production/TolleKugel/Score.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TolleKugel/Vector2D.class" afterPath="$PROJECT_DIR$/out/production/TolleKugel/Vector2D.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TolleKugel/Kugel.java.old" afterPath="$PROJECT_DIR$/out/production/TolleKugel/Kugel.java.old" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TolleKugel/README.TXT" afterPath="$PROJECT_DIR$/out/production/TolleKugel/README.TXT" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BoeseKugel.java" afterPath="$PROJECT_DIR$/src/BoeseKugel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Easings.java" afterPath="$PROJECT_DIR$/src/Easings.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GuteKugel.java" afterPath="$PROJECT_DIR$/src/GuteKugel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/KugelBild.java" afterPath="$PROJECT_DIR$/src/KugelBild.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags" afterPath="$PROJECT_DIR$/tags" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Score.java" afterPath="$PROJECT_DIR$/src/Score.java" />
     </list>
     <ignored path="TolleKugel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,11 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="KugelBild.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="KugelBild.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/KugelBild.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+            <state relative-caret-position="238">
+              <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -54,21 +54,21 @@
       <file leaf-file-name="Score.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Score.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+            <state relative-caret-position="189">
+              <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
               <folding>
-                <element signature="e#504#505#0" expanded="true" />
-                <element signature="e#528#529#0" expanded="true" />
+                <element signature="e#574#575#0" expanded="true" />
+                <element signature="e#598#599#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuteKugel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GuteKugel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GuteKugel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+            <state relative-caret-position="1207">
+              <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -77,8 +77,8 @@
       <file leaf-file-name="BoeseKugel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BoeseKugel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+            <state relative-caret-position="-705">
+              <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -87,7 +87,7 @@
       <file leaf-file-name="Vector2D.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vector2D.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
+            <state relative-caret-position="-1018">
               <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
               <folding>
                 <element signature="e#1070#1071#0" expanded="true" />
@@ -97,41 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EasingType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EasingType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Easings.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Easings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
+            <state relative-caret-position="1547">
               <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Border.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Border.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KeyboardListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/KeyboardListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -166,14 +136,14 @@
         <option value="$PROJECT_DIR$/src/Direction.java" />
         <option value="$PROJECT_DIR$/src/BöseKugel.java" />
         <option value="$PROJECT_DIR$/src/Kugel.java" />
-        <option value="$PROJECT_DIR$/src/Score.java" />
         <option value="$PROJECT_DIR$/src/Keyboard.java" />
         <option value="$PROJECT_DIR$/src/DrawThread.java" />
         <option value="$PROJECT_DIR$/src/KeyboardListener.java" />
-        <option value="$PROJECT_DIR$/src/BoeseKugel.java" />
         <option value="$PROJECT_DIR$/src/EasingType.java" />
         <option value="$PROJECT_DIR$/src/Easings.java" />
+        <option value="$PROJECT_DIR$/src/BoeseKugel.java" />
         <option value="$PROJECT_DIR$/src/GuteKugel.java" />
+        <option value="$PROJECT_DIR$/src/Score.java" />
         <option value="$PROJECT_DIR$/src/KugelBild.java" />
       </list>
     </option>
@@ -654,8 +624,8 @@
         <state relative-caret-position="374">
           <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
           <folding>
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -737,8 +707,8 @@
         <state relative-caret-position="374">
           <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
           <folding>
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -913,18 +883,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DrawThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tags">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/KeyboardListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DrawThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -936,35 +913,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tags">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Score.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-          <folding>
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#528#529#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/KugelBild.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Easings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
+        <state relative-caret-position="1547">
           <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
           <folding />
         </state>
@@ -980,7 +931,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Vector2D.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
+        <state relative-caret-position="-1018">
           <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
           <folding>
             <element signature="e#1070#1071#0" expanded="true" />
@@ -991,16 +942,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BoeseKugel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        <state relative-caret-position="-705">
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GuteKugel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        <state relative-caret-position="1207">
+          <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Score.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding>
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/KugelBild.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
           <folding />
         </state>
       </provider>

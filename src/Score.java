@@ -14,11 +14,12 @@ public class Score
     Color colour;
     Buntstift st;
     
-    public Score(double px, double py, Color c){
+    public Score(double px, double py, Color c, int pSchriftgroesse){
         x = px;
         y = py;
         st = new Buntstift();
         st.setzeFarbe(c);
+        st.setzeSchriftgroesse(pSchriftgroesse);
         
     }
     public void setScore(int sc){

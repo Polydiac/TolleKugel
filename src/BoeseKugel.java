@@ -12,6 +12,8 @@ public class BoeseKugel extends Kugel{
     boolean speedUp;
     double currentSpeed;
     int startFrame;
+    boolean plop;
+    int plopframe;
 
     public BoeseKugel(double prad, double px, double py, double speed, Color c, Bildschirm pbs, KeyboardListener kb) {
         super(prad, px, py, speed, c, pbs);
@@ -92,9 +94,5 @@ public class BoeseKugel extends Kugel{
         this.y = this.y + richt.getY();
         this.st.bewegeBis(this.x, this.y);
     }
-    
-    
-    
-
 
 }
