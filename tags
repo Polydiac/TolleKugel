@@ -233,8 +233,6 @@ Binaerbaum(java.lang.Object)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\strukturen\\Bina
 Binaerbaum(java.lang.Object,sum.strukturen.Binaerbaum,sum.strukturen.Binaerbaum)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\strukturen\\Binaerbaum.html	/^<A NAME="Binaerbaum(java.lang.Object,sum.strukturen.Binaerbaum,sum.strukturen.Binaerbaum)"><!-- /;"	a
 BoeseKugel	.\\src\\BoeseKugel.java	/^    public BoeseKugel(double prad, double px, double py, double speed, Color c, Bildschirm pbs, /;"	m	class:BoeseKugel
 BoeseKugel	.\\src\\BoeseKugel.java	/^public class BoeseKugel extends Kugel{$/;"	c
-BoeseKugel	src\\BoeseKugel.java	/^    public BoeseKugel(double prad, double px, double py, double speed, Color c, Bildschirm pbs, /;"	m	class:BoeseKugel
-BoeseKugel	src\\BoeseKugel.java	/^public class BoeseKugel extends Kugel{$/;"	c
 Border	.\\src\\Border.java	/^public enum Border {$/;"	g
 Buntstift()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Buntstift.html	/^<A NAME="Buntstift()"><!-- --><\/A><H3>$/;"	a
 Buntstift()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Buntstift.html	/^<A NAME="Buntstift()"><!-- --><\/A><H3>$/;"	a
@@ -252,6 +250,7 @@ Clientempfaenger(sum.netz.Clientverbindung, boolean)	.\\SuMWin\\SuMWin 7.3.1\\do
 Clientverbindung(java.lang.String, int, boolean)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\netz\\Clientverbindung.html	/^<A NAME="Clientverbindung(java.lang.String, int, boolean)"><!-- --><\/A><H3>$/;"	a
 DELETE	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Zeichen.html	/^<A NAME="DELETE"><!-- --><\/A><H3>$/;"	a
 DELETE	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Zeichen.html	/^<A NAME="DELETE"><!-- --><\/A><H3>$/;"	a
+DOWN	.\\src\\BoeseKugel.java	/^    char UP,DOWN,RIGHT,LEFT;$/;"	f	class:BoeseKugel
 DUNKELGRAU	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Farbe.html	/^<A NAME="DUNKELGRAU"><!-- --><\/A><H3>$/;"	a
 DUNKELGRAU	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Farbe.html	/^<A NAME="DUNKELGRAU"><!-- --><\/A><H3>$/;"	a
 DURCHSCHEINEND	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Muster.html	/^<A NAME="DURCHSCHEINEND"><!-- --><\/A><H3>$/;"	a
@@ -259,7 +258,6 @@ DURCHSCHEINEND	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Muster.html	/^<A NAME="D
 DURCHSICHTIG	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Muster.html	/^<A NAME="DURCHSICHTIG"><!-- --><\/A><H3>$/;"	a
 DURCHSICHTIG	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Muster.html	/^<A NAME="DURCHSICHTIG"><!-- --><\/A><H3>$/;"	a
 Datenbank()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\sql\\Datenbank.html	/^<A NAME="Datenbank()"><!-- --><\/A><H3>$/;"	a
-Direction	.\\src\\Direction.java	/^public class Direction {$/;"	c
 DrawThread	.\\src\\DrawThread.java	/^    public DrawThread(){$/;"	m	class:DrawThread
 DrawThread	.\\src\\DrawThread.java	/^    public DrawThread(int width, int height){$/;"	m	class:DrawThread
 DrawThread	.\\src\\DrawThread.java	/^    public DrawThread(int width, int height, int pframerate){$/;"	m	class:DrawThread
@@ -374,6 +372,7 @@ HELLGRAU	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Farbe.html	/^<A NAME="HELLGRAU
 HELVETICA	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Schrift.html	/^<A NAME="HELVETICA"><!-- --><\/A><H3>$/;"	a
 HELVETICA	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Schrift.html	/^<A NAME="HELVETICA"><!-- --><\/A><H3>$/;"	a
 HORIZONTAL	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Ausrichtung.html	/^<A NAME="HORIZONTAL"><!-- --><\/A><H3>$/;"	a
+HOST	src\\server\\server.py	/^HOST = ''$/;"	v
 Hashtabelle()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\strukturen\\Hashtabelle.html	/^<A NAME="Hashtabelle()"><!-- --><\/A><H3>$/;"	a
 Hashtabelle(int)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\strukturen\\Hashtabelle.html	/^<A NAME="Hashtabelle(int)"><!-- --><\/A><H3>$/;"	a
 KURSIV	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Schrift.html	/^<A NAME="KURSIV"><!-- --><\/A><H3>$/;"	a
@@ -392,7 +391,7 @@ Komponente()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Komponente.html	/^<
 Kugel	.\\src\\Kugel.java	/^    public Kugel(double prad, double px, double py, double speed, Color c, Bildschirm pbs){$/;"	m	class:Kugel
 Kugel	.\\src\\Kugel.java	/^public class Kugel {$/;"	c
 KugelBild	.\\src\\KugelBild.java	/^public class KugelBild extends DrawThread{$/;"	c
-KugelBild	src\\KugelBild.java	/^public class KugelBild extends DrawThread{$/;"	c
+LEFT	.\\src\\BoeseKugel.java	/^    char UP,DOWN,RIGHT,LEFT;$/;"	f	class:BoeseKugel
 LEFT	.\\src\\Border.java	/^    TOP, BOTTOM, LEFT, RIGHT$/;"	e	enum:Border	file:
 LINEAR_IN	.\\src\\EasingType.java	/^    SINE_IN, SINE_OUT, SINE_IN_OUT, QUINT_IN, QUINT_OUT, QUINT_IN_OUT, QUART_IN, QUART_OUT, QUAR/;"	e	enum:EasingType	file:
 LINEAR_IN_OUT	.\\src\\EasingType.java	/^    SINE_IN, SINE_OUT, SINE_IN_OUT, QUINT_IN, QUINT_OUT, QUINT_IN_OUT, QUART_IN, QUART_OUT, QUAR/;"	e	enum:EasingType	file:
@@ -426,6 +425,7 @@ PFEILUNTEN	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Zeichen.html	/^<A NAME="
 PFEILUNTEN	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Zeichen.html	/^<A NAME="PFEILUNTEN"><!-- --><\/A><H3>$/;"	a
 PINK	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Farbe.html	/^<A NAME="PINK"><!-- --><\/A><H3>$/;"	a
 PINK	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Farbe.html	/^<A NAME="PINK"><!-- --><\/A><H3>$/;"	a
+PORT	src\\server\\server.py	/^PORT = 1010$/;"	v
 POS1	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Zeichen.html	/^<A NAME="POS1"><!-- --><\/A><H3>$/;"	a
 POS1	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Zeichen.html	/^<A NAME="POS1"><!-- --><\/A><H3>$/;"	a
 QUAD_IN	.\\src\\EasingType.java	/^    SINE_IN, SINE_OUT, SINE_IN_OUT, QUINT_IN, QUINT_OUT, QUINT_IN_OUT, QUART_IN, QUART_OUT, QUAR/;"	e	enum:EasingType	file:
@@ -441,6 +441,7 @@ RADIERMODUS	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Stift.html	/^<A NAME="R
 RADIERMODUS	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Stift.html	/^<A NAME="RADIERMODUS"><!-- --><\/A><H3>$/;"	a
 RECHTS	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Ausrichtung.html	/^<A NAME="RECHTS"><!-- --><\/A><H3>$/;"	a
 RECHTSBUENDIG	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Ausrichtung.html	/^<A NAME="RECHTSBUENDIG"><!-- --><\/A><H3>$/;"	a
+RIGHT	.\\src\\BoeseKugel.java	/^    char UP,DOWN,RIGHT,LEFT;$/;"	f	class:BoeseKugel
 RIGHT	.\\src\\Border.java	/^    TOP, BOTTOM, LEFT, RIGHT$/;"	e	enum:Border	file:
 ROT	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Farbe.html	/^<A NAME="ROT"><!-- --><\/A><H3>$/;"	a
 ROT	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Farbe.html	/^<A NAME="ROT"><!-- --><\/A><H3>$/;"	a
@@ -474,7 +475,7 @@ Schalter(sum.ereignis.Fenster, double, double, double, double, java.lang.String)
 Schlange()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\strukturen\\Schlange.html	/^<A NAME="Schlange()"><!-- --><\/A><H3>$/;"	a
 Schrift()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Schrift.html	/^<A NAME="Schrift()"><!-- --><\/A><H3>$/;"	a
 Schrift()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Schrift.html	/^<A NAME="Schrift()"><!-- --><\/A><H3>$/;"	a
-Score	.\\src\\Score.java	/^    public Score(double px, double py, Color c){$/;"	m	class:Score
+Score	.\\src\\Score.java	/^    public Score(double px, double py, Color c, int pSchriftgroesse){$/;"	m	class:Score
 Score	.\\src\\Score.java	/^public class Score$/;"	c
 Server(int, boolean)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\netz\\Server.html	/^<A NAME="Server(int, boolean)"><!-- --><\/A><H3>$/;"	a
 Serververbindung()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\netz\\Serververbindung.html	/^<A NAME="Serververbindung()"><!-- --><\/A><H3>$/;"	a
@@ -507,6 +508,7 @@ Textfeld(sum.ereignis.Fenster, double, double, double, double, java.lang.String)
 Textkomponente()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Textkomponente.html	/^<A NAME="Textkomponente()"><!-- --><\/A><H3>$/;"	a
 Textwerkzeug()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\werkzeuge\\Textwerkzeug.html	/^<A NAME="Textwerkzeug()"><!-- --><\/A><H3>$/;"	a
 Ton()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\multimedia\\Ton.html	/^<A NAME="Ton()"><!-- --><\/A><H3>$/;"	a
+UP	.\\src\\BoeseKugel.java	/^    char UP,DOWN,RIGHT,LEFT;$/;"	f	class:BoeseKugel
 Uhr()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\werkzeuge\\Uhr.html	/^<A NAME="Uhr()"><!-- --><\/A><H3>$/;"	a
 VERTIKAL	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Ausrichtung.html	/^<A NAME="VERTIKAL"><!-- --><\/A><H3>$/;"	a
 Vector2D	.\\src\\Vector2D.java	/^    public Vector2D() {$/;"	m	class:Vector2D
@@ -555,6 +557,7 @@ _Z_	.\\SuMWin\\SuMWin 7.3.1\\doc\\index-all.html	/^<A NAME="_Z_"><!-- --><\/A><H
 acos(double)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\werkzeuge\\Rechner.html	/^<A NAME="acos(double)"><!-- --><\/A><H3>$/;"	a
 actionPerformed(java.awt.event.ActionEvent)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Eingabe.html	/^<A NAME="actionPerformed(java.awt.event.ActionEvent)"><!-- --><\/A><H3>$/;"	a
 actionPerformed(java.awt.event.ActionEvent)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Warnung.html	/^<A NAME="actionPerformed(java.awt.event.ActionEvent)"><!-- --><\/A><H3>$/;"	a
+addr	src\\server\\server.py	/^conn, addr = s.accept()$/;"	v
 aktiviere()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Komponente.html	/^<A NAME="aktiviere()"><!-- --><\/A><H3>$/;"	a
 aktiviere()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Menue.html	/^<A NAME="aktiviere()"><!-- --><\/A><H3>$/;"	a
 aktiviere()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\multimedia\\Bild.html	/^<A NAME="aktiviere()"><!-- --><\/A><H3>$/;"	a
@@ -653,7 +656,6 @@ betrag(int)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\werkzeuge\\Rechner.html	/^<A NAME
 bewege	.\\src\\BoeseKugel.java	/^    public void bewege(Vector2D richt){$/;"	m	class:BoeseKugel
 bewege	.\\src\\GuteKugel.java	/^    public void bewege(double weite, int frame){$/;"	m	class:GuteKugel
 bewege	.\\src\\GuteKugel.java	/^    public void bewege(int frame){$/;"	m	class:GuteKugel
-bewege	src\\BoeseKugel.java	/^    public void bewege(Vector2D richt){$/;"	m	class:BoeseKugel
 bewegeBis(double, double)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Stift.html	/^<A NAME="bewegeBis(double, double)"><!-- --><\/A><H3>$/;"	a
 bewegeBis(double, double)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Stift.html	/^<A NAME="bewegeBis(double, double)"><!-- --><\/A><H3>$/;"	a
 bewegeUm(double)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Stift.html	/^<A NAME="bewegeUm(double)"><!-- --><\/A><H3>$/;"	a
@@ -683,6 +685,7 @@ clientListe()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\netz\\Server.html	/^<A NAME="cl
 colour	.\\src\\Score.java	/^    Color colour;$/;"	f	class:Score
 componentProduct	.\\src\\Vector2D.java	/^    public double componentProduct() {$/;"	m	class:Vector2D
 componentwiseProduct	.\\src\\Vector2D.java	/^    public Vector2D componentwiseProduct(Vector2D rhs) {$/;"	m	class:Vector2D
+conn	src\\server\\server.py	/^conn, addr = s.accept()$/;"	v
 constructor_detail	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Bildschirm.html	/^<A NAME="constructor_detail"><!-- --><\/A>$/;"	a
 constructor_detail	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Buntstift.html	/^<A NAME="constructor_detail"><!-- --><\/A>$/;"	a
 constructor_detail	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\EBAnwendung.html	/^<A NAME="constructor_detail"><!-- --><\/A>$/;"	a
@@ -825,7 +828,7 @@ cubicEaseIn	.\\src\\Easings.java	/^    public static double cubicEaseIn (double 
 cubicEaseInOut	.\\src\\Easings.java	/^    public static double cubicEaseInOut (double t,double b , double c, double d) {$/;"	m	class:Easings
 cubicEaseOut	.\\src\\Easings.java	/^    public static double cubicEaseOut (double t,double b , double c, double d) {$/;"	m	class:Easings
 currentSpeed	.\\src\\BoeseKugel.java	/^    double currentSpeed;$/;"	f	class:BoeseKugel
-currentSpeed	src\\BoeseKugel.java	/^    double currentSpeed;$/;"	f	class:BoeseKugel
+date	src\\server\\server.py	/^    date = conn.recv(1024)$/;"	v
 datenbankinfo()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\sql\\Datenbank.html	/^<A NAME="datenbankinfo()"><!-- --><\/A><H3>$/;"	a
 datenfeldAlsGanzeZahl(int)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\sql\\SQLErgebnisliste.html	/^<A NAME="datenfeldAlsGanzeZahl(int)"><!-- --><\/A><H3>$/;"	a
 datenfeldAlsGanzeZahl(java.lang.String)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\sql\\SQLErgebnisliste.html	/^<A NAME="datenfeldAlsGanzeZahl(java.lang.String)"><!-- --><\/A><H3>$/;"	a
@@ -842,7 +845,6 @@ del	.\\src\\Kugel.java	/^    public void del(){$/;"	m	class:Kugel
 del	.\\src\\Score.java	/^    public void del(){$/;"	m	class:Score
 delete	.\\src\\DrawThread.java	/^    public void delete(){$/;"	m	class:DrawThread
 delete	.\\src\\KugelBild.java	/^    public void delete(){$/;"	m	class:KugelBild
-delete	src\\KugelBild.java	/^    public void delete(){$/;"	m	class:KugelBild
 dezimalInDual(int)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\werkzeuge\\Rechner.html	/^<A NAME="dezimalInDual(int)"><!-- --><\/A><H3>$/;"	a
 doUpdate(javax.swing.JComponent)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Bildschirm.html	/^<A NAME="doUpdate(javax.swing.JComponent)"><!-- --><\/A><H3>$/;"	a
 doppelKlick()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Maus.html	/^<A NAME="doppelKlick()"><!-- --><\/A><H3>$/;"	a
@@ -852,7 +854,6 @@ draw	.\\src\\GuteKugel.java	/^    public void draw(){$/;"	m	class:GuteKugel
 draw	.\\src\\Kugel.java	/^    public void draw(){$/;"	m	class:Kugel
 draw	.\\src\\KugelBild.java	/^    public void draw(int frame){$/;"	m	class:KugelBild
 draw	.\\src\\Score.java	/^    public void draw(){$/;"	m	class:Score
-draw	src\\KugelBild.java	/^    public void draw(int frame){$/;"	m	class:KugelBild
 dreheBis(double)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Stift.html	/^<A NAME="dreheBis(double)"><!-- --><\/A><H3>$/;"	a
 dreheBis(double)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Stift.html	/^<A NAME="dreheBis(double)"><!-- --><\/A><H3>$/;"	a
 dreheUm(double)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Stift.html	/^<A NAME="dreheUm(double)"><!-- --><\/A><H3>$/;"	a
@@ -1131,10 +1132,8 @@ gestoppteZeit()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\werkzeuge\\Uhr.html	/^<A NAME
 get2DGraphics(java.awt.Graphics)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Stift.html	/^<A NAME="get2DGraphics(java.awt.Graphics)"><!-- --><\/A><H3>$/;"	a
 get2DGraphics(java.awt.Graphics)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Stift.html	/^<A NAME="get2DGraphics(java.awt.Graphics)"><!-- --><\/A><H3>$/;"	a
 getDirection	.\\src\\BoeseKugel.java	/^    protected Vector2D getDirection(int frame){$/;"	m	class:BoeseKugel
-getDirection	src\\BoeseKugel.java	/^    protected Vector2D getDirection(int frame){$/;"	m	class:BoeseKugel
 getFenster	.\\src\\DrawThread.java	/^    public Fenster getFenster(){ return bs;}$/;"	m	class:DrawThread
 getKugelArray	.\\src\\KugelBild.java	/^    public static GuteKugel[] getKugelArray(int kugelCount, Fenster pbs){$/;"	m	class:KugelBild
-getKugelArray	src\\KugelBild.java	/^    public static GuteKugel[] getKugelArray(int kugelCount, Fenster pbs){$/;"	m	class:KugelBild
 getNextValue	.\\src\\Easings.java	/^    public double getNextValue(){$/;"	m	class:Easings
 getR	.\\src\\Vector2D.java	/^    public double getR() {$/;"	m	class:Vector2D
 getTable	.\\src\\KeyboardListener.java	/^    public Hashtable<Character, Boolean> getTable(){$/;"	m	class:KeyboardListener
@@ -1282,7 +1281,6 @@ inhaltIstZahl()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Textkomponente.h
 inhaltIstZahlAn(int, int)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Tabelle.html	/^<A NAME="inhaltIstZahlAn(int, int)"><!-- --><\/A><H3>$/;"	a
 init	.\\src\\DrawThread.java	/^    public void init(){$/;"	m	class:DrawThread
 init	.\\src\\KugelBild.java	/^    public void init(){$/;"	m	class:KugelBild
-init	src\\KugelBild.java	/^    public void init(){$/;"	m	class:KugelBild
 init(double, double, double, double)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Komponente.html	/^<A NAME="init(double, double, double, double)"><!-- --><\/A><H3>$/;"	a
 init(double, double, double, double, java.lang.String)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Textkomponente.html	/^<A NAME="init(double, double, double, double, java.lang.String)"><!-- --><\/A><H3>$/;"	a
 init2DGraphics()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Bildschirm.html	/^<A NAME="init2DGraphics()"><!-- --><\/A><H3>$/;"	a
@@ -1347,7 +1345,6 @@ keyPressed	.\\src\\KeyboardListener.java	/^    public void keyPressed(KeyEvent e
 keyReleased	.\\src\\KeyboardListener.java	/^    public void keyReleased(KeyEvent e) {$/;"	m	class:KeyboardListener
 keyTyped	.\\src\\KeyboardListener.java	/^    public void keyTyped(KeyEvent e){$/;"	m	class:KeyboardListener
 keyboard	.\\src\\BoeseKugel.java	/^    KeyboardListener keyboard;$/;"	f	class:BoeseKugel
-keyboard	src\\BoeseKugel.java	/^    KeyboardListener keyboard;$/;"	f	class:BoeseKugel
 keys	.\\src\\KeyboardListener.java	/^    private Hashtable<Character, Boolean> keys;$/;"	f	class:KeyboardListener	file:
 kleinSchrift(java.lang.String)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\werkzeuge\\Textwerkzeug.html	/^<A NAME="kleinSchrift(java.lang.String)"><!-- --><\/A><H3>$/;"	a
 kleinschrift(java.lang.String)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\werkzeuge\\Textwerkzeug.html	/^<A NAME="kleinschrift(java.lang.String)"><!-- --><\/A><H3>$/;"	a
@@ -1355,7 +1352,6 @@ knopfGeklickt()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Knopf.html	/^<A 
 knopfGeklickt()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Radioknopf.html	/^<A NAME="knopfGeklickt()"><!-- --><\/A><H3>$/;"	a
 kopf()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\strukturen\\Schlange.html	/^<A NAME="kopf()"><!-- --><\/A><H3>$/;"	a
 kugeln	.\\src\\KugelBild.java	/^    GuteKugel[] kugeln;$/;"	f	class:KugelBild
-kugeln	src\\KugelBild.java	/^    GuteKugel[] kugeln;$/;"	f	class:KugelBild
 ladeBild()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\multimedia\\Bild.html	/^<A NAME="ladeBild()"><!-- --><\/A><H3>$/;"	a
 ladeBild(java.applet.Applet, java.lang.String)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\multimedia\\Bild.html	/^<A NAME="ladeBild(java.applet.Applet, java.lang.String)"><!-- --><\/A><H3>$/;"	a
 ladeBild(java.lang.String)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\multimedia\\Bild.html	/^<A NAME="ladeBild(java.lang.String)"><!-- --><\/A><H3>$/;"	a
@@ -1409,7 +1405,6 @@ loescheMarkierung()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Zeichenberei
 loescheMarkierung()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Zeilenbereich.html	/^<A NAME="loescheMarkierung()"><!-- --><\/A><H3>$/;"	a
 loescheVerbindung(sum.netz.Serververbindung)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\netz\\Server.html	/^<A NAME="loescheVerbindung(sum.netz.Serververbindung)"><!-- --><\/A><H3>$/;"	a
 main	.\\src\\KugelBild.java	/^    public static void main(String[]args){$/;"	m	class:KugelBild
-main	src\\KugelBild.java	/^    public static void main(String[]args){$/;"	m	class:KugelBild
 markiereAlles()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Markierungskomponente.html	/^<A NAME="markiereAlles()"><!-- --><\/A><H3>$/;"	a
 markiereAlles()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Tabelle.html	/^<A NAME="markiereAlles()"><!-- --><\/A><H3>$/;"	a
 markiereAlles()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Textfeld.html	/^<A NAME="markiereAlles()"><!-- --><\/A><H3>$/;"	a
@@ -2196,8 +2191,9 @@ paint(java.awt.Graphics)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Bildschirm.htm
 paint(java.awt.Graphics)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\multimedia\\Bild.html	/^<A NAME="paint(java.awt.Graphics)"><!-- --><\/A><H3>$/;"	a
 partnerAdresse()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\netz\\Verbindung.html	/^<A NAME="partnerAdresse()"><!-- --><\/A><H3>$/;"	a
 partnerPort()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\netz\\Verbindung.html	/^<A NAME="partnerPort()"><!-- --><\/A><H3>$/;"	a
-player	.\\src\\KugelBild.java	/^    BoeseKugel player;$/;"	f	class:KugelBild
-player	src\\KugelBild.java	/^    BoeseKugel player;$/;"	f	class:KugelBild
+players	.\\src\\KugelBild.java	/^    BoeseKugel[] players;$/;"	f	class:KugelBild
+plop	.\\src\\BoeseKugel.java	/^    boolean plop;$/;"	f	class:BoeseKugel
+plopframe	.\\src\\BoeseKugel.java	/^    int plopframe;$/;"	f	class:BoeseKugel
 plus	.\\src\\Vector2D.java	/^    public Vector2D plus(Vector2D rhs) {$/;"	m	class:Vector2D
 port()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\netz\\Server.html	/^<A NAME="port()"><!-- --><\/A><H3>$/;"	a
 position(Typ)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\strukturen\\Liste.html	/^<A NAME="position(java.lang.Object)"><!-- --><\/A><A NAME="position(Typ)"><!-- --><\/A><H3>$/;"	a
@@ -2206,7 +2202,6 @@ positionVon(java.lang.String, java.lang.String)	.\\SuMWin\\SuMWin 7.3.1\\doc\\su
 potenz(double, double)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\werkzeuge\\Rechner.html	/^<A NAME="potenz(double, double)"><!-- --><\/A><H3>$/;"	a
 potenz(int, int)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\werkzeuge\\Rechner.html	/^<A NAME="potenz(int, int)"><!-- --><\/A><H3>$/;"	a
 prevKeys	.\\src\\BoeseKugel.java	/^    ArrayList prevKeys;$/;"	f	class:BoeseKugel
-prevKeys	src\\BoeseKugel.java	/^    ArrayList prevKeys;$/;"	f	class:BoeseKugel
 privatPanel()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Bildschirm.html	/^<A NAME="privatPanel()"><!-- --><\/A><H3>$/;"	a
 privatPanel()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Bildschirm.html	/^<A NAME="privatPanel()"><!-- --><\/A><H3>$/;"	a
 quadEaseIn	.\\src\\Easings.java	/^    public static double  quadEaseIn(double t,double b , double c, double d) {$/;"	m	class:Easings
@@ -2227,7 +2222,6 @@ rechterSuchbaum()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\strukturen\\Suchbinaerbaum.
 rechterTeilbaum()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\strukturen\\Baum.html	/^<A NAME="rechterTeilbaum()"><!-- --><\/A><H3>$/;"	a
 rechterTeilbaum()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\strukturen\\Binaerbaum.html	/^<A NAME="rechterTeilbaum()"><!-- --><\/A><H3>$/;"	a
 respawn	.\\src\\KugelBild.java	/^    public void respawn(int frame){$/;"	m	class:KugelBild
-respawn	src\\KugelBild.java	/^    public void respawn(int frame){$/;"	m	class:KugelBild
 rgb(int, int, int)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Farbe.html	/^<A NAME="rgb(int, int, int)"><!-- --><\/A><H3>$/;"	a
 rgb(int, int, int)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Farbe.html	/^<A NAME="rgb(int, int, int)"><!-- --><\/A><H3>$/;"	a
 ri	.\\src\\Kugel.java	/^    boolean ri,le,to,bo = false;$/;"	f	class:Kugel
@@ -2242,6 +2236,7 @@ run()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\netz\\Serververbindung.html	/^<A NAME="
 run()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\werkzeuge\\Animation.html	/^<A NAME="run()"><!-- --><\/A><H3>$/;"	a
 runter()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Stift.html	/^<A NAME="runter()"><!-- --><\/A><H3>$/;"	a
 runter()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Stift.html	/^<A NAME="runter()"><!-- --><\/A><H3>$/;"	a
+s	src\\server\\server.py	/^s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)$/;"	v
 scalarMult	.\\src\\Vector2D.java	/^    public Vector2D scalarMult(double scalar) {$/;"	m	class:Vector2D
 schalteAn()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Schalter.html	/^<A NAME="schalteAn()"><!-- --><\/A><H3>$/;"	a
 schalteAus()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Schalter.html	/^<A NAME="schalteAus()"><!-- --><\/A><H3>$/;"	a
@@ -2260,8 +2255,7 @@ schreibeZahl(int)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Stift.html	/^<A NAME=
 schriftFarbe()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Textkomponente.html	/^<A NAME="schriftFarbe()"><!-- --><\/A><H3>$/;"	a
 schriftfarbe()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Textkomponente.html	/^<A NAME="schriftfarbe()"><!-- --><\/A><H3>$/;"	a
 score	.\\src\\Score.java	/^    int score = 0;$/;"	f	class:Score
-scoreboard	.\\src\\KugelBild.java	/^    Score scoreboard;$/;"	f	class:KugelBild
-scoreboard	src\\KugelBild.java	/^    Score scoreboard;$/;"	f	class:KugelBild
+scoreboards	.\\src\\KugelBild.java	/^    Score[] scoreboards;$/;"	f	class:KugelBild
 sekunde()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\werkzeuge\\Uhr.html	/^<A NAME="sekunde()"><!-- --><\/A><H3>$/;"	a
 sende(java.lang.String)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\netz\\Verbindung.html	/^<A NAME="sende(java.lang.String)"><!-- --><\/A><H3>$/;"	a
 sendeAnAlle(java.lang.String)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\netz\\Server.html	/^<A NAME="sendeAnAlle(java.lang.String)"><!-- --><\/A><H3>$/;"	a
@@ -2638,10 +2632,8 @@ spaltennummer(java.lang.String)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\sql\\SQLErgeb
 spaltentitel(int)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\komponenten\\Tabelle.html	/^<A NAME="spaltentitel(int)"><!-- --><\/A><H3>$/;"	a
 spaltentyp(int)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\sql\\SQLErgebnisliste.html	/^<A NAME="spaltentyp(int)"><!-- --><\/A><H3>$/;"	a
 spawnEntities	.\\src\\KugelBild.java	/^    int spawnEntities;$/;"	f	class:KugelBild
-spawnEntities	src\\KugelBild.java	/^    int spawnEntities;$/;"	f	class:KugelBild
 speed	.\\src\\Kugel.java	/^    double speed;$/;"	f	class:Kugel
 speedUp	.\\src\\BoeseKugel.java	/^    boolean speedUp;$/;"	f	class:BoeseKugel
-speedUp	src\\BoeseKugel.java	/^    boolean speedUp;$/;"	f	class:BoeseKugel
 speichereBild()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\multimedia\\Bild.html	/^<A NAME="speichereBild()"><!-- --><\/A><H3>$/;"	a
 speichereBild(java.lang.String)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\multimedia\\Bild.html	/^<A NAME="speichereBild(java.lang.String)"><!-- --><\/A><H3>$/;"	a
 speichereTon()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\multimedia\\Ton.html	/^<A NAME="speichereTon()"><!-- --><\/A><H3>$/;"	a
@@ -2653,7 +2645,6 @@ st	.\\src\\Kugel.java	/^    Buntstift st;$/;"	f	class:Kugel
 st	.\\src\\Score.java	/^    Buntstift st;$/;"	f	class:Score
 start	.\\src\\GuteKugel.java	/^    float dur,change,start,beginning;$/;"	f	class:GuteKugel
 startFrame	.\\src\\BoeseKugel.java	/^    int startFrame;$/;"	f	class:BoeseKugel
-startFrame	src\\BoeseKugel.java	/^    int startFrame;$/;"	f	class:BoeseKugel
 startValue	.\\src\\Easings.java	/^    double time, startValue, change, duration;$/;"	f	class:Easings
 starte()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\werkzeuge\\Uhr.html	/^<A NAME="starte()"><!-- --><\/A><H3>$/;"	a
 starteAufnahme()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\multimedia\\Ton.html	/^<A NAME="starteAufnahme()"><!-- --><\/A><H3>$/;"	a
@@ -2883,7 +2874,6 @@ ueberschreibeWurzel(Typ)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\strukturen\\Binaerba
 ueberschreibeWurzel(java.lang.Object)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\strukturen\\Binaerbaum.html	/^<A NAME="ueberschreibeWurzel(java.lang.Object)"><!-- --><\/A><A NAME="ueberschreibeWurzel(Typ)">/;"	a
 untereGrenze()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\strukturen\\Feld.html	/^<A NAME="untereGrenze()"><!-- --><\/A><H3>$/;"	a
 update	.\\src\\BoeseKugel.java	/^    public void update(int frame){$/;"	m	class:BoeseKugel
-update	src\\BoeseKugel.java	/^    public void update(int frame){$/;"	m	class:BoeseKugel
 update(java.awt.Graphics)	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Bildschirm.html	/^<A NAME="update(java.awt.Graphics)"><!-- --><\/A><H3>$/;"	a
 vPosition()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\ereignis\\Stift.html	/^<A NAME="vPosition()"><!-- --><\/A><H3>$/;"	a
 vPosition()	.\\SuMWin\\SuMWin 7.3.1\\doc\\sum\\kern\\Maus.html	/^<A NAME="vPosition()"><!-- --><\/A><H3>$/;"	a
