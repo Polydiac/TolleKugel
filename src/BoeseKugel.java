@@ -15,9 +15,15 @@ public class BoeseKugel extends Kugel{
     int startFrame;
     boolean plop;
     int plopframe;
+    char UP,DOWN,RIGHT,LEFT;
+    
 
-    public BoeseKugel(double prad, double px, double py, double speed, Color c, Bildschirm pbs, KeyboardListener kb) {
+    public BoeseKugel(double prad, double px, double py, double speed, Color c, Bildschirm pbs, KeyboardListener kb, char up, char down, char left, char right) {
         super(prad, px, py, speed, c, pbs);
+        UP = up;
+        DOWN = down;
+        LEFT = left;
+        RIGHT = right;
         this.keyboard = kb;
         currentSpeed = 0.01;
         this.draw();
@@ -42,7 +48,7 @@ public class BoeseKugel extends Kugel{
 
         boolean anyKey = false;
 
-        if((boolean)keys.get((Character) 'w')){
+        if((boolean)keys.get((Character) UP)){
             dir = dir.plus(new Vector2D(0, -this.currentSpeed));
             anyKey =true;
             if (!speedUp) {
@@ -50,7 +56,7 @@ public class BoeseKugel extends Kugel{
                 speedUp = true;
             }
         }
-        if((boolean)keys.get((Character) 'a')){
+        if((boolean)keys.get((Character) LEFT)){
             dir = dir.plus(new Vector2D(-this.currentSpeed, 0));
             anyKey =true;
             if (!speedUp) {
@@ -58,7 +64,7 @@ public class BoeseKugel extends Kugel{
                 speedUp = true;
             }
         }
-        if((boolean)keys.get((Character) 's')){
+        if((boolean)keys.get((Character) DOWN)){
             dir = dir.plus(new Vector2D(0, this.currentSpeed));
             anyKey =true;
             if (!speedUp) {
@@ -66,7 +72,7 @@ public class BoeseKugel extends Kugel{
                 speedUp = true;
             }
         }
-        if((boolean)keys.get((Character) 'd')){
+        if((boolean)keys.get((Character) RIGHT)){
             dir = dir.plus(new Vector2D(this.currentSpeed, 0));
             anyKey =true;
             if (!speedUp) {
