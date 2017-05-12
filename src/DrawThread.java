@@ -5,6 +5,7 @@ import sum.kern.*;
 import java.awt.*;
 
 
+
 /**
  * Created by Sören on 22.03.2017.
  */
@@ -49,7 +50,7 @@ public abstract class DrawThread {
 
     protected void run(){
         bs.setBackground(new Color(255, 255, 255));
-        init();
+        this.init();
         while(!(ts.wurdeGedrueckt()&& ts.zeichen() == Zeichen.ESCAPE)){
             long startTime = System.nanoTime();
             this.delete();

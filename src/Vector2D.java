@@ -3,6 +3,8 @@
 import java.awt.geom.Point2D;
 import java.lang.Math;
 
+
+
 /**
  * An extension to the relatively impotent java.awt.geom.Point2D.Double,
  * Vector2D allows mathematical manipulation of 2-component vectors.

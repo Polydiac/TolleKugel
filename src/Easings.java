@@ -3,6 +3,8 @@
 /**
  *  Processing-penner-easing
  */
+
+
 public class Easings {
     double time, startValue, change, duration;
     EasingType type;

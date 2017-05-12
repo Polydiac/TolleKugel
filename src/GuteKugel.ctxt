@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.params=prad\ px\ py\ pricht\ speed\ c\ pbs
 comment0.target=GuteKugel(double,\ double,\ double,\ double,\ double,\ java.awt.Color,\ sum.kern.Bildschirm)
-comment1.params=
-comment1.target=void\ bewege()
-comment2.params=weite
-comment2.target=void\ bewege(double)
+comment1.params=frame
+comment1.target=void\ bewege(int)
+comment2.params=weite\ frame
+comment2.target=void\ bewege(double,\ int)
 comment3.params=
 comment3.target=void\ draw()
 comment4.params=b

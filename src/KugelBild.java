@@ -1,6 +1,7 @@
 import sum.kern.*;
 import java.util.Random;
 import java.awt.Color;
+
 /**
  * Created by Sören on 30.03.2017.
  */
@@ -12,7 +13,7 @@ public class KugelBild extends DrawThread{
     
     public void init(){
         spawnEntities = 2000;
-        player = new BoeseKugel(30,500, 500, 20, Color.BLACK, this.bs, kb);
+        player = new BoeseKugel(30,500, 500, 20, Color.BLACK, this.bs, this.kb);
         kugeln = getKugelArray(spawnEntities, this.bs);
         scoreboard = new Score(900, 20, Color.GREEN, 25);
     }
