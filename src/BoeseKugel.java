@@ -8,18 +8,18 @@ import java.util.Hashtable;
  * Created by Soeren on 27.04.2017.
  */
 public class BoeseKugel extends Kugel{
-    KeyboardListener keyboard;
-    ArrayList prevKeys;
+    transient KeyboardListener keyboard;
     boolean speedUp;
     double currentSpeed;
     int startFrame;
-    boolean plop;
-    int plopframe;
     char UP,DOWN,RIGHT,LEFT;
-    
 
-    public BoeseKugel(double prad, double px, double py, double speed, Color c, Bildschirm pbs, KeyboardListener kb, char up, char down, char left, char right) {
-        super(prad, px, py, speed, c, pbs);
+    public BoeseKugel(){
+
+    }
+
+    public BoeseKugel(double prad, double px, double py, double speed, Color c, Bildschirm pbs, KeyboardListener kb, char up, char down, char left, char right, String id) {
+        super(prad, px, py, speed, c, pbs, id);
         UP = up;
         DOWN = down;
         LEFT = left;
@@ -100,6 +100,14 @@ public class BoeseKugel extends Kugel{
         this.x = this.x + richt.getX();
         this.y = this.y + richt.getY();
         this.st.bewegeBis(this.x, this.y);
+    }
+
+    public Hashtable serialize(){
+        Hashtable dict = super.serialize();
+        dict.put("speedUp", speedUp);
+        dict.put("currentSpeed", currentSpeed);
+        dict.put("startFrame", startFrame);
+        return dict;
     }
 
 }

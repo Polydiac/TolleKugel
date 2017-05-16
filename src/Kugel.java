@@ -5,19 +5,24 @@
 
 import sum.kern.*;
 import java.awt.Color;
+import java.util.Hashtable;
 
 public class Kugel {
-    
+    String id;
     boolean hide = false;
-    Buntstift st;
-    Bildschirm bs;
+    transient Buntstift  st;
+    transient Bildschirm bs;
     double rad;
     double x,y;
     double richt;
     double speed;
     boolean ri,le,to,bo = false;
 
-    public Kugel(double prad, double px, double py, double speed, Color c, Bildschirm pbs){
+    public Kugel(){
+    }
+
+    public Kugel(double prad, double px, double py, double speed, Color c, Bildschirm pbs, String id){
+        this.id = id;
         bs = pbs;
         this.speed = speed;
         st = new Buntstift((Fenster) pbs);
@@ -50,5 +55,16 @@ public class Kugel {
     
     public void hideK(){
         this.hide = true;
+    }
+
+    public Hashtable serialize(){
+        Hashtable dict = new Hashtable();
+        dict.put("x", x);
+        dict.put("y", y);
+        dict.put("hide", hide);
+        dict.put("rad", rad);
+        dict.put("richt", richt);
+        dict.put("speed", speed);
+        return dict;
     }
 }

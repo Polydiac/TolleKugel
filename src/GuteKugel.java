@@ -1,6 +1,8 @@
 import sum.kern.Bildschirm;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.Hashtable;
 
 /**
  * Created by Soeren on 27.04.2017.
@@ -10,8 +12,12 @@ public class GuteKugel extends Kugel {
     float dur,change,start,beginning;
     boolean anim = false;
 
-    public GuteKugel(double prad, double px, double py, double pricht, double speed, Color c, Bildschirm pbs) {
-        super(prad, px, py, speed, c, pbs);
+    public GuteKugel(){
+
+    }
+
+    public GuteKugel(double prad, double px, double py, double pricht, double speed, Color c, Bildschirm pbs, String id) {
+        super(prad, px, py, speed, c, pbs, id);
         richt = pricht;
         this.st.dreheBis(pricht);
     }
@@ -122,5 +128,14 @@ public class GuteKugel extends Kugel {
         } else{
             this.anim = false;
         }
+    }
+    public Hashtable serialize(){
+        Hashtable dict = super.serialize();
+        dict.put("start", start);
+        dict.put("change", change);
+        dict.put("dur", dur);
+        dict.put("beginning", beginning);
+        dict.put("anim", anim);
+        return dict;
     }
 }
