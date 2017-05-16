@@ -43,7 +43,7 @@ public class GameStateReceiveThread implements Runnable{
                         parent.queue.add(state.kugeln);
                         break;
                     case BROADCAST:
-
+                        parent.sendMsg(new GameState(), packet.getAddress());
                         break;
                 }
 

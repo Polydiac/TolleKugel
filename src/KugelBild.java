@@ -1,6 +1,8 @@
 import sum.kern.*;
 
+import javax.swing.*;
 import java.io.IOException;
+import java.net.InetAddress;
 import java.util.Random;
 import java.awt.Color;
 
@@ -17,6 +19,7 @@ public class KugelBild extends DrawThread{
     Connection con;
 
     public void init(){
+
         scoreboards = new Score[2];
         spawnEntities = 2000;
         players = new BoeseKugel[2];
@@ -106,13 +109,13 @@ public class KugelBild extends DrawThread{
                 case PLAYER:
                     for(int p = 0; p < this.players.length; p++){
                         if(this.players[p].id == this.playerId){
-                            GameState gameState = new GameState(this.players[p]);
+                            GameState gameState = new GameState(this.players[p], this.playerId);
                             con.sendMsg(gameState);
                         }
                     }
                     break;
                 case GUTEKUGELN:
-                    GameState gameState = new GameState(this.kugeln);
+                    GameState gameState = new GameState(this.kugeln, this.playerId);
                     con.sendMsg(gameState);
                     break;
             }
@@ -122,7 +125,30 @@ public class KugelBild extends DrawThread{
         }
     }
 
+    public void multiplayerSetup(){
+        Object[] optionsMultiplayer = {"Online Multiplayer", "Local Multiplayer"};
+        int multiplayer = JOptionPane.showOptionDialog(null, "Local or online multiplayer",
+                "Multiplayer",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null, optionsMultiplayer, optionsMultiplayer[0]);
+        Object[] optionsHost = {"Host", "Wait for host"};
+        int host =  JOptionPane.showOptionDialog(null, "Are you the host?",
+                "Multiplayer",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null, optionsHost, optionsHost[1]);
+        if(host == 0){
+            new Connection().sendMsg(new GameState("player1"));
+            JOptionPane.showMessageDialog(null, "Connecting to other clients. Please Wait...");
+            InetAddress peerURL = new Connection().getConnection();
+            con = new Connection(peerURL.getCanonicalHostName());
+        }
+    }
+
     public static void main(String[]args){
+
+
         new KugelBild();
     }
 

@@ -10,6 +10,8 @@ import java.util.LinkedList;
 public class Connection {
     static int port = 2828;
     String url;
+    String username;
+    String playerID;
     GameStateReceiveThread[] connections;
     LinkedList<GuteKugel[]> queue;
     LinkedList<BoeseKugel> playerQueue;
@@ -31,8 +33,14 @@ public class Connection {
         connections[1] = new GameStateReceiveThread(port, this);
     }
 
-
-    public void sendMsg(GameState state) {
+    public void sendMsg(GameState state){
+        try {
+            this.sendMsg(state, InetAddress.getByName(this.url));
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+    }
+    public void sendMsg(GameState state, InetAddress url) {
         try {
             Gson gson = new Gson();
             String json = gson.toJson(state);
@@ -41,11 +49,11 @@ public class Connection {
             DatagramSocket socket = new DatagramSocket();
             switch (state.type){
                 case PLAYER:
-                    DatagramPacket packPlayer = new DatagramPacket(raw, raw.length, InetAddress.getByName(url), port);
+                    DatagramPacket packPlayer = new DatagramPacket(raw, raw.length, url, port);
                     socket.send(packPlayer);
                     break;
                 case GUTEKUGELN:
-                    DatagramPacket pack = new DatagramPacket(raw, raw.length, InetAddress.getByName(url), port);
+                    DatagramPacket pack = new DatagramPacket(raw, raw.length, url, port);
                     socket.send(pack);
                     break;
                 case BROADCAST:
@@ -60,8 +68,6 @@ public class Connection {
             e.printStackTrace();
         }
 
-
-
     }
     public GuteKugel[] getGameState(){
         return queue.removeFirst();
@@ -70,5 +76,17 @@ public class Connection {
         return playerQueue.removeFirst();
     }
 
-
+    public InetAddress getConnection(){
+        try {
+            DatagramPacket pack = new DatagramPacket(new byte[65536], 65536);
+            DatagramSocket socket = new DatagramSocket(this.port);
+            socket.setSoTimeout(200000);
+            socket.receive(pack);
+            return pack.getAddress();
+        } catch (SocketException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

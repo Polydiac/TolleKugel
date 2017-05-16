@@ -8,7 +8,6 @@ import java.util.Hashtable;
  * Created by Soeren on 27.04.2017.
  */
 public class GuteKugel extends Kugel {
-    double richt;
     float dur,change,start,beginning;
     boolean anim = false;
 
