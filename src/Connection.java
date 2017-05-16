@@ -12,7 +12,7 @@ public class Connection {
     String url;
     String username;
     String playerID;
-    GameStateReceiveThread[] connections;
+    GameStateReceiveThread connection;
     LinkedList<GuteKugel[]> queue;
     LinkedList<BoeseKugel> playerQueue;
 
@@ -24,13 +24,11 @@ public class Connection {
     }
 
     public Connection(String purl, int pport) {
-        connections = new GameStateReceiveThread[2];
+        connection = new GameStateReceiveThread(port, this);
         port = pport;
         url = purl;
         queue = new LinkedList<GuteKugel[]>();
         playerQueue = new LinkedList<BoeseKugel>();
-        connections[0] = new GameStateReceiveThread(port, this);
-        connections[1] = new GameStateReceiveThread(port, this);
     }
 
     public void sendMsg(GameState state){
@@ -60,6 +58,10 @@ public class Connection {
                     DatagramPacket packBroadcast = new DatagramPacket(raw, raw.length, InetAddress.getByName("255.255.255.255"), port);
                     socket.send(packBroadcast);
                     break;
+                case CONNECTION:
+                    DatagramPacket returnPackage = new DatagramPacket(raw, raw.length, url, port);
+                    socket.send(returnPackage);
+                    break;
             }
 
         } catch (UnknownHostException e) {
@@ -80,13 +82,15 @@ public class Connection {
         try {
             DatagramPacket pack = new DatagramPacket(new byte[65536], 65536);
             DatagramSocket socket = new DatagramSocket(this.port);
-            socket.setSoTimeout(200000);
+            socket.setSoTimeout(2000000);
             socket.receive(pack);
             return pack.getAddress();
         } catch (SocketException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            return null;
         }
     }
 }

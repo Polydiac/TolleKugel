@@ -19,7 +19,7 @@ public class KugelBild extends DrawThread{
     Connection con;
 
     public void init(){
-
+        multiplayerSetup();
         scoreboards = new Score[2];
         spawnEntities = 2000;
         players = new BoeseKugel[2];
@@ -75,6 +75,13 @@ public class KugelBild extends DrawThread{
         if(currentBalls < spawnEntities * (2/3)){
             respawn(frame);
         }
+        for (int i=0; i<0;i++){
+            if(players[i].id != playerId){
+                players[i] = con.getPlayers();
+            }
+        }
+
+        this.sendGameState(PackageType.PLAYER);
 
     }
 
@@ -133,16 +140,22 @@ public class KugelBild extends DrawThread{
                 JOptionPane.QUESTION_MESSAGE,
                 null, optionsMultiplayer, optionsMultiplayer[0]);
         Object[] optionsHost = {"Host", "Wait for host"};
-        int host =  JOptionPane.showOptionDialog(null, "Are you the host?",
-                "Multiplayer",
-                JOptionPane.YES_NO_OPTION,
-                JOptionPane.QUESTION_MESSAGE,
-                null, optionsHost, optionsHost[1]);
-        if(host == 0){
-            new Connection().sendMsg(new GameState("player1"));
-            JOptionPane.showMessageDialog(null, "Connecting to other clients. Please Wait...");
-            InetAddress peerURL = new Connection().getConnection();
-            con = new Connection(peerURL.getCanonicalHostName());
+        if(multiplayer == 0){
+            int host =  JOptionPane.showOptionDialog(null, "Are you the host?",
+                    "Multiplayer",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.QUESTION_MESSAGE,
+                    null, optionsHost, optionsHost[1]);
+            if(host == 0){
+                new Connection().sendMsg(new GameState("player1"));
+                JOptionPane.showMessageDialog(null, "Connecting to other clients. Please Wait...");
+                InetAddress peerURL = new Connection().getConnection();
+                con = new Connection(peerURL.getCanonicalHostName());
+            } else {
+                InetAddress peerURL = new Connection().getConnection();
+                con = new Connection(peerURL.getCanonicalHostName());
+                con.sendMsg(new GameState(), peerURL);
+            }
         }
     }
 
