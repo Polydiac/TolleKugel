@@ -13,6 +13,7 @@ public class BoeseKugel extends Kugel{
     double currentSpeed;
     int startFrame;
     char UP,DOWN,RIGHT,LEFT;
+    PowerUp powerUp;
 
     public BoeseKugel(){
 
@@ -48,7 +49,7 @@ public class BoeseKugel extends Kugel{
 
         boolean anyKey = false;
 
-        if((boolean)keys.get((Character) UP)){
+        if((boolean)keys.get(UP)){
             dir = dir.plus(new Vector2D(0, -this.currentSpeed));
             anyKey =true;
             if (!speedUp) {
@@ -56,7 +57,7 @@ public class BoeseKugel extends Kugel{
                 speedUp = true;
             }
         }
-        if((boolean)keys.get((Character) LEFT)){
+        if((boolean)keys.get(LEFT)){
             dir = dir.plus(new Vector2D(-this.currentSpeed, 0));
             anyKey =true;
             if (!speedUp) {
@@ -64,7 +65,7 @@ public class BoeseKugel extends Kugel{
                 speedUp = true;
             }
         }
-        if((boolean)keys.get((Character) DOWN)){
+        if((boolean)keys.get(DOWN)){
             dir = dir.plus(new Vector2D(0, this.currentSpeed));
             anyKey =true;
             if (!speedUp) {
@@ -72,7 +73,7 @@ public class BoeseKugel extends Kugel{
                 speedUp = true;
             }
         }
-        if((boolean)keys.get((Character) RIGHT)){
+        if((boolean)keys.get(RIGHT)){
             dir = dir.plus(new Vector2D(this.currentSpeed, 0));
             anyKey =true;
             if (!speedUp) {
@@ -101,13 +102,4 @@ public class BoeseKugel extends Kugel{
         this.y = this.y + richt.getY();
         this.st.bewegeBis(this.x, this.y);
     }
-
-    public Hashtable serialize(){
-        Hashtable dict = super.serialize();
-        dict.put("speedUp", speedUp);
-        dict.put("currentSpeed", currentSpeed);
-        dict.put("startFrame", startFrame);
-        return dict;
-    }
-
 }

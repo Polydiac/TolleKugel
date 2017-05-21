@@ -1,7 +1,6 @@
 import sum.kern.*;
 
 import javax.swing.*;
-import java.io.IOException;
 import java.net.InetAddress;
 import java.util.Random;
 import java.awt.Color;
@@ -12,22 +11,30 @@ import java.awt.Color;
  */
 public class KugelBild extends DrawThread{
     GuteKugel[] kugeln;
+    PowerUp[] powerUps;
     String playerId;
     BoeseKugel[] players;
     Score[] scoreboards;
     int spawnEntities;
     Connection con;
+    boolean multiplayer;
 
     public void init(){
         multiplayerSetup();
         scoreboards = new Score[2];
+
+        powerUps = new PowerUp[5];
+        for(int i=0; i<powerUps.length; i++){
+            powerUps[i] = new PowerUp(60, 500, 500, 30, 10, Color.black, this.bs, "test");
+        }
+
         spawnEntities = 2000;
         players = new BoeseKugel[2];
         players[0] = new BoeseKugel(30,500, 500, 20, Color.BLACK, this.bs, this.kb, 'w', 's', 'a', 'd', "player1");
-        players[1] = new BoeseKugel(30,500, 500, 20, Color.BLACK, this.bs, this.kb, 'u', 'j', 'h', 'k',"player2");
+        players[1] = new BoeseKugel(30,700, 500, 20, Color.BLACK, this.bs, this.kb, 'u', 'j', 'h', 'k',"player2");
         kugeln = getKugelArray(spawnEntities, this.bs);
         for(int i = 0; i <scoreboards.length;i++){
-            scoreboards[i] = new Score(900, (i+1)*40, Color.GREEN, 25);
+            scoreboards[i] = new Score(70, (i+1)*40, Color.GREEN, 25, this.bs);
         }
 
     }
@@ -42,19 +49,12 @@ public class KugelBild extends DrawThread{
                 kugeln[i].animateOut(frame);
                 kugeln[i].draw();
             }
-        }
-        for(int i=0;i<players.length;i++){
-            players[i].update(frame);
-        }
-
-        for(int i= 0; i< kugeln.length;i++){
-
             for(int o=0;o<players.length;o++){
                 if(kugeln[i].checkCollision(players[o])){
                     if(!kugeln[i].hide) {
                         scoreboards[o].incScore();
 
-                        
+
                         //player.rad = Easings.quadEaseOut((float)player.rad+1, 30, 170, 500);
                     }
                     kugeln[i].toggleAnim(frame);
@@ -63,6 +63,15 @@ public class KugelBild extends DrawThread{
                 }
             }
         }
+        for(int i=0;i<players.length;i++){
+            players[i].update(frame);
+            /*for(int x=0;x<players.length;x++){
+                if(x != i && players[i].checkCollision(players[x])){
+
+                }
+            }*/
+        }
+
         for(int i=0; i < scoreboards.length;i++){
             scoreboards[i].draw();
         }
@@ -72,13 +81,21 @@ public class KugelBild extends DrawThread{
                 currentBalls++;
             }
         }
-        if(currentBalls < spawnEntities * (2/3)){
+        if(currentBalls < kugeln.length * (2/3)){
+            System.out.println("Respawning");
             respawn(frame);
         }
-        for (int i=0; i<0;i++){
-            if(players[i].id != playerId){
-                players[i] = con.getPlayers();
+        if(multiplayer){
+            for (int i=0; i<players.length;i++){
+                if(players[i].id != playerId){
+                    players[i] = con.getPlayers();
+                }
             }
+        }
+
+        for(int i=0; i<powerUps.length; i++){
+            powerUps[i].bewege(frame);
+            powerUps[i].draw();
         }
 
         this.sendGameState(PackageType.PLAYER);
@@ -87,7 +104,7 @@ public class KugelBild extends DrawThread{
 
     public void respawn(int frame){
         Random rnd = new Random(System.currentTimeMillis());
-        if(frame%1==0){
+        if(true){
             for(int i = 0; i< kugeln.length;i++){
                 if(kugeln[i].hide) {
                     kugeln[i] = new GuteKugel(5 + rnd.nextInt(50), rnd.nextDouble() * bs.breite(), rnd.nextDouble() * bs.hoehe(), rnd.nextInt(360), rnd.nextDouble() * 10, new Color(rnd.nextInt(255), rnd.nextInt(255), rnd.nextInt(255)), bs, Integer.toString(i));
@@ -105,6 +122,9 @@ public class KugelBild extends DrawThread{
         }
         for(int i = 0; i <scoreboards.length;i++){
             scoreboards[i].del();
+        }
+        for(int i = 0; i<powerUps.length; i++){
+            powerUps[i].del();
         }
         
 
@@ -146,14 +166,16 @@ public class KugelBild extends DrawThread{
                     JOptionPane.YES_NO_OPTION,
                     JOptionPane.QUESTION_MESSAGE,
                     null, optionsHost, optionsHost[1]);
+            int port = new Integer(JOptionPane.showInputDialog(null, "Send on which Port"));
+            int listenOn = new Integer(JOptionPane.showInputDialog(null, "Listen on what Port"));
             if(host == 0){
                 new Connection().sendMsg(new GameState("player1"));
                 JOptionPane.showMessageDialog(null, "Connecting to other clients. Please Wait...");
                 InetAddress peerURL = new Connection().getConnection();
-                con = new Connection(peerURL.getCanonicalHostName());
+                con = new Connection(peerURL.getCanonicalHostName(), port, listenOn);
             } else {
                 InetAddress peerURL = new Connection().getConnection();
-                con = new Connection(peerURL.getCanonicalHostName());
+                con = new Connection(peerURL.getCanonicalHostName(), port, listenOn);
                 con.sendMsg(new GameState(), peerURL);
             }
         }

@@ -24,7 +24,6 @@ public class GameStateReceiveThread implements Runnable{
     public void run(){
         while(true) {
             try {
-
                 DatagramSocket socket = new DatagramSocket(port);
                 DatagramPacket packet = new DatagramPacket(new byte[65536], 65536);
                 socket.receive(packet);
@@ -46,6 +45,7 @@ public class GameStateReceiveThread implements Runnable{
                         parent.sendMsg(new GameState(), packet.getAddress());
                         break;
                 }
+                socket.close();
 
             } catch (SocketException e) {
                 e.printStackTrace();

@@ -26,7 +26,6 @@ public class GuteKugel extends Kugel {
 
     }
     public void bewege(double weite, int frame){
-
         st.bewegeUm(weite);
         x = st.hPosition();
         y = st.vPosition();
@@ -69,9 +68,7 @@ public class GuteKugel extends Kugel {
 
     public void draw(){
         st.bewegeBis(x,y);
-        //if(!(x<0-this.rad||y<0-this.rad||x>bs.breite()+this.rad||y>bs.breite()+this.rad)){
         st.zeichneKreis(rad);
-        //}
     }
 
     private double richtUmkehren( Border b){
@@ -127,14 +124,5 @@ public class GuteKugel extends Kugel {
         } else{
             this.anim = false;
         }
-    }
-    public Hashtable serialize(){
-        Hashtable dict = super.serialize();
-        dict.put("start", start);
-        dict.put("change", change);
-        dict.put("dur", dur);
-        dict.put("beginning", beginning);
-        dict.put("anim", anim);
-        return dict;
     }
 }
