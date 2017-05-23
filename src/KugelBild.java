@@ -136,19 +136,21 @@ public class KugelBild extends DrawThread{
                 case PLAYER:
                     for(int p = 0; p < this.players.length; p++){
                         if(this.players[p].id == this.playerId){
-                            GameState gameState = new GameState(this.players[p], this.playerId);
+                            Message gameState = new Message(this.players[p], this.playerId);
                             con.sendMsg(gameState);
                         }
                     }
                     break;
                 case GUTEKUGELN:
-                    GameState gameState = new GameState(this.kugeln, this.playerId);
+                    Message gameState = new Message(this.kugeln, this.playerId);
                     con.sendMsg(gameState);
                     break;
             }
         }
         else{
-            System.out.println("No peer found!");
+            if(multiplayer) {
+                System.out.println("No peer found!");
+            }
         }
     }
 
@@ -169,14 +171,14 @@ public class KugelBild extends DrawThread{
             int port = new Integer(JOptionPane.showInputDialog(null, "Send on which Port"));
             int listenOn = new Integer(JOptionPane.showInputDialog(null, "Listen on what Port"));
             if(host == 0){
-                new Connection().sendMsg(new GameState("player1"));
+                new Connection().sendMsg(new Message("player1"));
                 JOptionPane.showMessageDialog(null, "Connecting to other clients. Please Wait...");
                 InetAddress peerURL = new Connection().getConnection();
                 con = new Connection(peerURL.getCanonicalHostName(), port, listenOn);
             } else {
                 InetAddress peerURL = new Connection().getConnection();
                 con = new Connection(peerURL.getCanonicalHostName(), port, listenOn);
-                con.sendMsg(new GameState(), peerURL);
+                con.sendMsg(new Message(), peerURL);
             }
         }
     }

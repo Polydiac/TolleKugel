@@ -32,7 +32,7 @@ public class GameStateReceiveThread implements Runnable{
                 String result = new String(msg);
 
                 Gson gson = new Gson();
-                GameState state = gson.fromJson(result, GameState.class);
+                Message state = gson.fromJson(result, Message.class);
 
                 switch (state.type) {
                     case PLAYER:
@@ -42,7 +42,7 @@ public class GameStateReceiveThread implements Runnable{
                         parent.queue.add(state.kugeln);
                         break;
                     case BROADCAST:
-                        parent.sendMsg(new GameState(), packet.getAddress());
+                        parent.sendMsg(new Message(), packet.getAddress());
                         break;
                 }
                 socket.close();

@@ -7,7 +7,31 @@ import java.util.LinkedList;
 /**
  * Created by Soeren on 12.05.2017.
  */
-public class Connection {
+
+public class Connection implements Runnable{
+    KugelBild parent;
+    int port = 2828;
+    String url;
+    String username = System.getProperty("user.name");
+    String playerID;
+    ServerSocket socket;
+    PrintWriter out;
+    InputStreamReader in;
+
+    public Connection(KugelBild parent){
+        this.parent = parent;
+        DatagramPacket pack = new DatagramPacket(new byte[65536], 65536);
+
+    }
+
+
+    public void run(){
+
+    }
+}
+
+/*public class Connection {
+
     static int port = 2828;
     int listenOn;
     String url;
@@ -45,7 +69,7 @@ public class Connection {
                         System.out.println(result);
 
                         Gson gson = new Gson();
-                        GameState state = gson.fromJson(result, GameState.class);
+                        Message state = gson.fromJson(result, Message.class);
 
                         switch (state.type) {
                             case PLAYER:
@@ -55,7 +79,7 @@ public class Connection {
                                 queue.add(state.kugeln);
                                 break;
                             case BROADCAST:
-                                sendMsg(new GameState(), packet.getAddress());
+                                sendMsg(new Message(), packet.getAddress());
                                 break;
                         }
                     }
@@ -78,14 +102,14 @@ public class Connection {
         }).start();
     }
 
-    public void sendMsg(GameState state){
+    public void sendMsg(Message state){
         try {
             this.sendMsg(state, InetAddress.getByName(this.url));
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
     }
-    public void sendMsg(GameState state, InetAddress url) {
+    public void sendMsg(Message state, InetAddress url) {
         System.out.println(this.port);
         System.out.println(this.listenOn);
 
@@ -153,4 +177,4 @@ public class Connection {
             return null;
         }
     }
-}
+}*/
