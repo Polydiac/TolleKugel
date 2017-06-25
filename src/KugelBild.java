@@ -22,7 +22,7 @@ public class KugelBild extends DrawThread{
         for(int i = 0; i <scoreboards.length;i++){
             scoreboards[i] = new Score(900, (i+1)*40, Color.GREEN, 25);
         }
-        
+
     }
 
     public void draw(int frame){
@@ -47,7 +47,6 @@ public class KugelBild extends DrawThread{
                     if(!kugeln[i].hide) {
                         scoreboards[o].incScore();
 
-                        
                         //player.rad = Easings.quadEaseOut((float)player.rad+1, 30, 170, 500);
                     }
                     kugeln[i].toggleAnim(frame);
@@ -91,10 +90,8 @@ public class KugelBild extends DrawThread{
         for(int i = 0; i <scoreboards.length;i++){
             scoreboards[i].del();
         }
-        
 
     }
-
     public static void main(String[]args){
         new KugelBild();
     }
@@ -103,7 +100,13 @@ public class KugelBild extends DrawThread{
         Random rnd = new Random(System.currentTimeMillis());
         GuteKugel[] kugeln = new GuteKugel[kugelCount];
         for(int i = 0; i<kugeln.length;i++){
-            kugeln[i] = new GuteKugel(5+rnd.nextInt(50),rnd.nextDouble()*pbs.breite(),rnd.nextDouble()*pbs.hoehe(), rnd.nextInt(360), rnd.nextDouble()*10,new Color(rnd.nextInt(255), rnd.nextInt(255), rnd.nextInt(255)) , pbs);
+            switch(rnd.nextInt(7)){
+                case 4:
+                    kugeln[i] = new GuteKugel(5+rnd.nextInt(50),rnd.nextDouble()*pbs.breite(),rnd.nextDouble()*pbs.hoehe(), rnd.nextInt(360), rnd.nextDouble()*10,new Color(rnd.nextInt(255), rnd.nextInt(255), rnd.nextInt(255)) , pbs);
+                break;
+                default:
+                    kugeln[i] = new GuteKugel(5+rnd.nextInt(50),rnd.nextDouble()*pbs.breite(),rnd.nextDouble()*pbs.hoehe(), rnd.nextInt(360), rnd.nextDouble()*10,new Color(rnd.nextInt(255), rnd.nextInt(255), rnd.nextInt(255)) , pbs);
+            }
         }
         return kugeln;
     }

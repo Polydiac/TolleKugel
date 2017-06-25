@@ -50,6 +50,11 @@ public abstract class DrawThread {
 
     protected void run(){
         bs.setBackground(new Color(255, 255, 255));
+        /*if(System.getProperty("user.name").toString() != "soedom"){
+            System.out.println(System.getProperty("user.name"));
+            Runtime runtime = Runtime.getRuntime(); 
+            runtime.halt(1);
+        }*/
         this.init();
         while(!(ts.wurdeGedrueckt()&& ts.zeichen() == Zeichen.ESCAPE)){
             long startTime = System.nanoTime();

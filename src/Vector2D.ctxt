@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Vector2D()
-comment0.text=\r\n\ (non-Javadoc)\r\n\ \r\n\ @see\ java.awt.geom.Point2D.Double\#Point2D.Double()\r\n
+comment0.text=\ (non-Javadoc)\r\n\ \r\n\ @see\ java.awt.geom.Point2D.Double\#Point2D.Double()\r\n
 comment1.params=x\ y
 comment1.target=Vector2D(double,\ double)
-comment1.text=\r\n\ (non-Javadoc)\r\n\ \r\n\ @see\ java.awt.geom.Point2D.Double\#Point2D.Double()\r\n
+comment1.text=\ (non-Javadoc)\r\n\ \r\n\ @see\ java.awt.geom.Point2D.Double\#Point2D.Double()\r\n
 comment10.params=rhs
 comment10.target=Vector2D\ minus(Vector2D)
 comment10.text=The\ difference\ of\ the\ vector\ and\ rhs\:\ this\ -\ rhs
@@ -51,7 +51,7 @@ comment4.target=double\ getTheta()
 comment4.text=\r\n\ @return\ the\ angle\ (argument)\ of\ the\ vector\ in\ polar\ coordinates\ in\ the\r\n\ \ \ \ \ \ \ \ \ range\ [-pi/2,\ pi/2]\r\n
 comment5.params=x\ y
 comment5.target=void\ set(double,\ double)
-comment5.text=\r\n\ (non-Javadoc)\r\n\ \r\n\ @see\ java.awt.geom.Point2D.Double\#setLocation(double,\ double)\r\n
+comment5.text=\ (non-Javadoc)\r\n\ \r\n\ @see\ java.awt.geom.Point2D.Double\#setLocation(double,\ double)\r\n
 comment6.params=r\ t
 comment6.target=void\ setPolar(double,\ double)
 comment6.text=\r\n\ Sets\ the\ vector\ given\ polar\ arguments.\r\n\ \r\n\ @param\ r\r\n\ \ \ \ \ \ \ \ \ \ \ \ The\ new\ radius\r\n\ @param\ t\r\n\ \ \ \ \ \ \ \ \ \ \ \ The\ new\ angle,\ in\ radians\r\n

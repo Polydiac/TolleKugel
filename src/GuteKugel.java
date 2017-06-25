@@ -58,11 +58,11 @@ public class GuteKugel extends Kugel {
         }
 
         st.normal();
-        draw();
+        draw(frame);
 
     }
 
-    public void draw(){
+    public void draw(int frame){
         st.bewegeBis(x,y);
         //if(!(x<0-this.rad||y<0-this.rad||x>bs.breite()+this.rad||y>bs.breite()+this.rad)){
         st.zeichneKreis(rad);
