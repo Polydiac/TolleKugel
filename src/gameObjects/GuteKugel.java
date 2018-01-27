@@ -1,4 +1,8 @@
+package gameObjects;
+
 import sum.kern.Bildschirm;
+import util.Border;
+import util.Easings;
 
 import java.awt.*;
 
@@ -8,7 +12,7 @@ import java.awt.*;
 public class GuteKugel extends Kugel {
     double richt;
     float dur,change,start,beginning;
-    boolean anim = false;
+    public boolean anim = false;
 
     public GuteKugel(double prad, double px, double py, double pricht, double speed, Color c, Bildschirm pbs) {
         super(prad, px, py, speed, c, pbs);

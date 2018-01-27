@@ -1,6 +1,7 @@
  
 
 import sum.kern.*;
+import util.KeyboardListener;
 
 import java.awt.*;
 
@@ -54,6 +55,7 @@ public abstract class DrawThread {
         while(!(ts.wurdeGedrueckt()&& ts.zeichen() == Zeichen.ESCAPE)){
             long startTime = System.nanoTime();
             this.delete();
+            this.update();
             this.draw(frame);
 
             if(bs != null){
@@ -74,13 +76,13 @@ public abstract class DrawThread {
         bs.gibFrei();
     }
 
-    public void init(){
+    public abstract void init();
+
+    public void update(){
 
     }
 
-    public void draw(int frame){
-
-    }
+    public abstract void draw(int frame);
 
 
     public void delete(){

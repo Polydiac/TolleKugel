@@ -1,4 +1,4 @@
- 
+package util;
 
 import java.awt.geom.Point2D;
 import java.lang.Math;
@@ -7,7 +7,7 @@ import java.lang.Math;
 
 /**
  * An extension to the relatively impotent java.awt.geom.Point2D.Double,
- * Vector2D allows mathematical manipulation of 2-component vectors.
+ * util.Vector2D allows mathematical manipulation of 2-component vectors.
  * 
  * @author Jadrian Miles
  * @version 20031122
@@ -41,7 +41,7 @@ public class Vector2D extends Point2D.Double {
     }
 
     /**
-     * @return the radius (length, modulus) of the vector in polar coordinates
+     * @return the radius (duration, modulus) of the vector in polar coordinates
      */
     public double getR() {
         return Math.sqrt(x * x + y * y);
@@ -113,7 +113,7 @@ public class Vector2D extends Point2D.Double {
     }
 
     /**
-     * Since Vector2D works only in the x-y plane, (u x v) points directly along
+     * Since util.Vector2D works only in the x-y plane, (u x v) points directly along
      * the z axis. This function returns the value on the z axis that (u x v)
      * reaches.
      * 
@@ -135,7 +135,7 @@ public class Vector2D extends Point2D.Double {
 
     /**
      * An alias for getR()
-     * @return the length of this
+     * @return the duration of this
      */
     public double length() {
         return getR();
@@ -143,7 +143,7 @@ public class Vector2D extends Point2D.Double {
 
     /**
      * Returns a new vector with the same direction as the vector but with
-     * length 1, except in the case of zero vectors, which return a copy of
+     * duration 1, except in the case of zero vectors, which return a copy of
      * themselves.
      */
     public Vector2D normalize() {

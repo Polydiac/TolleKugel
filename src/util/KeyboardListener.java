@@ -1,4 +1,4 @@
-/**
+package util; /**
  * Created by Soeren on 28.04.2017.
  */
 import java.util.Hashtable;

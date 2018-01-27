@@ -1,4 +1,4 @@
-  /**
+package gameObjects;  /**
  * Created by Sören on 30.03.2017.
  */
 
@@ -8,7 +8,7 @@ import java.awt.Color;
 
 public class Kugel {
     
-    boolean hide = false;
+    public boolean hide = false;
     Buntstift st;
     Bildschirm bs;
     double rad;

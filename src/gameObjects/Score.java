@@ -1,8 +1,10 @@
+package gameObjects;
+
 import java.awt.Color;
 
 import sum.kern.*;
 /**
- * Beschreiben Sie hier die Klasse Score.
+ * Beschreiben Sie hier die Klasse gameObjects.Score.
  * 
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)

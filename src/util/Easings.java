@@ -1,4 +1,6 @@
- 
+package util;
+
+import static util.EasingType.*;
 
 /**
  *  Processing-penner-easing
@@ -105,15 +107,15 @@ public class Easings {
      */
 
     public static double  sineEaseIn(double t,double b , double c, double d) {
-        return -c * (double)Math.cos(t/d * (Math.PI/2)) + c + b;
+        return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
     }
 
     public static double  sineEaseOut(double t,double b , double c, double d) {
-        return c * (double)Math.sin(t/d * (Math.PI/2)) + b;
+        return c * Math.sin(t/d * (Math.PI/2)) + b;
     }
 
     public static double  sineEaseInOut(double t,double b , double c, double d) {
-        return -c/2 * ((double)Math.cos(Math.PI*t/d) - 1) + b;
+        return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
     }
 
     public static double quintEaseIn (double t,double b , double c, double d) {
@@ -172,18 +174,18 @@ public class Easings {
     }
 
     public static double  expoEaseIn(double t,double b , double c, double d) {
-        return (t==0) ? b : c * (double)Math.pow(2, 10 * (t/d - 1)) + b;
+        return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
     }
 
     public static double  expoEaseOut(double t,double b , double c, double d) {
-        return (t==d) ? b+c : c * (-(double)Math.pow(2, -10 * t/d) + 1) + b;
+        return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
     }
 
     public static double  expoEaseInOut(double t,double b , double c, double d) {
         if (t==0) return b;
         if (t==d) return b+c;
-        if ((t/=d/2) < 1) return c/2 * (double)Math.pow(2, 10 * (t - 1)) + b;
-        return c/2 * (-(double)Math.pow(2, -10 * --t) + 2) + b;
+        if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
+        return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
     }
 
     public static double  elasticEaseIn(double t,double b , double c, double d ) {
@@ -191,15 +193,15 @@ public class Easings {
         double p=d*.3f;
         double a=c;
         double s=p/4;
-        return -(a*(double)Math.pow(2,10*(t-=1)) * (double)Math.sin( (t*d-s)*(2*(double)Math.PI)/p )) + b;
+        return -(a* Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2* Math.PI)/p )) + b;
     }
 
     public static double  elasticEaseIn(double t,double b , double c, double d, double a, double p) {
         double s;
         if (t==0) return b;  if ((t/=d)==1) return b+c;
         if (a < Math.abs(c)) { a=c;  s=p/4; }
-        else { s = p/(2*(double)Math.PI) * (double)Math.asin (c/a);}
-        return -(a*(double)Math.pow(2,10*(t-=1)) * (double)Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+        else { s = p/(2* Math.PI) * Math.asin (c/a);}
+        return -(a* Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
     }
 
     public static double  elasticEaseOut(double t,double b , double c, double d) {
@@ -207,15 +209,15 @@ public class Easings {
         double p=d*.3f;
         double a=c;
         double s=p/4;
-        return (a*(double)Math.pow(2,-10*t) * (double)Math.sin( (t*d-s)*(2*(double)Math.PI)/p ) + c + b);
+        return (a* Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2* Math.PI)/p ) + c + b);
     }
 
     public static double  elasticEaseOut(double t,double b , double c, double d, double a, double p) {
         double s;
         if (t==0) return b;  if ((t/=d)==1) return b+c;
         if (a < Math.abs(c)) { a=c;  s=p/4; }
-        else { s = p/(2*(double)Math.PI) * (double)Math.asin (c/a);}
-        return (a*(double)Math.pow(2,-10*t) * (double)Math.sin( (t*d-s)*(2*(double)Math.PI)/p ) + c + b);
+        else { s = p/(2* Math.PI) * Math.asin (c/a);}
+        return (a* Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2* Math.PI)/p ) + c + b);
     }
 
     public static double  elasticEaseInOut(double t,double b , double c, double d) {
@@ -223,17 +225,17 @@ public class Easings {
         double p=d*(.3f*1.5f);
         double a=c;
         double s=p/4;
-        if (t < 1) return -.5f*(a*(double)Math.pow(2,10*(t-=1)) * (double)Math.sin( (t*d-s)*(2*(double)Math.PI)/p )) + b;
-        return a*(double)Math.pow(2,-10*(t-=1)) * (double)Math.sin( (t*d-s)*(2*(double)Math.PI)/p )*.5f + c + b;
+        if (t < 1) return -.5f*(a* Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2* Math.PI)/p )) + b;
+        return a* Math.pow(2,-10*(t-=1)) * Math.sin( (t*d-s)*(2* Math.PI)/p ) *.5f + c + b;
     }
 
     public static double  elasticEaseInOut(double t,double b , double c, double d, double a, double p) {
         double s;
         if (t==0) return b;  if ((t/=d/2)==2) return b+c;
         if (a < Math.abs(c)) { a=c; s=p/4; }
-        else { s = p/(2*(double)Math.PI) * (double)Math.asin (c/a);}
-        if (t < 1) return -.5f*(a*(double)Math.pow(2,10*(t-=1)) * (double)Math.sin( (t*d-s)*(2*(double)Math.PI)/p )) + b;
-        return a*(double)Math.pow(2,-10*(t-=1)) * (double)Math.sin( (t*d-s)*(2*(double)Math.PI)/p )*.5f + c + b;
+        else { s = p/(2* Math.PI) * Math.asin (c/a);}
+        if (t < 1) return -.5f*(a* Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2* Math.PI)/p )) + b;
+        return a* Math.pow(2,-10*(t-=1)) * Math.sin( (t*d-s)*(2* Math.PI)/p ) *.5f + c + b;
     }
 
     public static double cubicEaseIn (double t,double b , double c, double d) {
@@ -250,16 +252,16 @@ public class Easings {
     }
 
     public static double  circEaseIn(double t,double b , double c, double d) {
-        return -c * ((double)Math.sqrt(1 - (t/=d)*t) - 1) + b;
+        return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
     }
 
     public static double  circEaseOut(double t,double b , double c, double d) {
-        return c * (double)Math.sqrt(1 - (t=t/d-1)*t) + b;
+        return c * Math.sqrt(1 - (t=t/d-1)*t) + b;
     }
 
     public static double  circEaseInOut(double t,double b , double c, double d) {
-        if ((t/=d/2) < 1) return -c/2 * ((double)Math.sqrt(1 - t*t) - 1) + b;
-        return c/2 * ((double)Math.sqrt(1 - (t-=2)*t) + 1) + b;
+        if ((t/=d/2) < 1) return -c/2 * (Math.sqrt(1 - t*t) - 1) + b;
+        return c/2 * (Math.sqrt(1 - (t-=2)*t) + 1) + b;
     }
 
     public static double  bounceEaseIn(double t,double b , double c, double d) {

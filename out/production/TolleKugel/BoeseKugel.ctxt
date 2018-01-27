@@ -1,12 +1,10 @@
 #BlueJ class context
-comment0.params=prad\ px\ py\ speed\ c\ pbs
-comment0.target=BoeseKugel(double,\ double,\ double,\ double,\ java.awt.Color,\ sum.kern.Bildschirm)
+comment0.params=prad\ px\ py\ speed\ c\ pbs\ kb\ up\ down\ left\ right
+comment0.target=BoeseKugel(double,\ double,\ double,\ double,\ java.awt.Color,\ sum.kern.Bildschirm,\ KeyboardListener,\ char,\ char,\ char,\ char)
 comment1.params=frame
 comment1.target=void\ update(int)
-comment2.params=
-comment2.target=Vector2D\ getDirection()
-comment3.params=
-comment3.target=java.util.ArrayList\ getKeys()
-comment4.params=richt
-comment4.target=void\ bewege(Vector2D)
-numComments=5
+comment2.params=frame
+comment2.target=Vector2D\ getDirection(int)
+comment3.params=richt
+comment3.target=void\ bewege(Vector2D)
+numComments=4

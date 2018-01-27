@@ -1,5 +1,11 @@
-import sum.kern.Bildschirm;
+package gameObjects;
 
+import sum.kern.Bildschirm;
+import util.Easings;
+import util.KeyboardListener;
+import util.Vector2D;
+
+import javax.xml.bind.ValidationException;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -7,7 +13,7 @@ import java.util.Hashtable;
 /**
  * Created by Soeren on 27.04.2017.
  */
-public class BoeseKugel extends Kugel{
+public class BoeseKugel extends Kugel {
     KeyboardListener keyboard;
     ArrayList prevKeys;
     boolean speedUp;
@@ -36,7 +42,9 @@ public class BoeseKugel extends Kugel{
                 this.currentSpeed = Easings.sineEaseInOut(frame-startFrame, 0.01f, (float)this.speed, duration);
             }
         }
-        this.bewege(getDirection(frame));
+        Vector2D direction = getDirection(frame);
+
+        this.bewege(direction);
         this.draw();
     }
 
