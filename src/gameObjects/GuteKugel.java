@@ -1,5 +1,6 @@
 package gameObjects;
 
+import javafx.util.Pair;
 import sum.kern.Bildschirm;
 import util.Border;
 import util.Easings;
@@ -13,11 +14,13 @@ public class GuteKugel extends Kugel {
     double richt;
     float dur,change,start,beginning;
     public boolean anim = false;
+    int bbreite, bhoehe;
 
-    public GuteKugel(double prad, double px, double py, double pricht, double speed, Color c, Bildschirm pbs) {
-        super(prad, px, py, speed, c, pbs);
+    public GuteKugel(double prad, double px, double py, double pricht, double speed, Color c, int pbbreite, int pbhoehe) {
+        super(prad, px, py, speed, c);
         richt = pricht;
-        this.st.dreheBis(pricht);
+        bbreite = pbbreite;
+        bhoehe = pbhoehe;
     }
 
     public void bewege(int frame){
@@ -26,33 +29,26 @@ public class GuteKugel extends Kugel {
     }
     public void bewege(double weite, int frame){
 
-        st.bewegeUm(weite);
-        x = st.hPosition();
-        y = st.vPosition();
-        if(x >= (bs.breite() - rad)){
+        moveBy(weite, this.richt);
+        if(x >= (bbreite - rad)){
             richt = richtUmkehren( Border.RIGHT);
-            st.dreheBis(richt);
+            moveBy(weite+rad*2, richt);
             ri = true;
-            st.bewegeUm(weite+rad*2);
         }
-        else if (y >= bs.hoehe() - rad){
+        else if (y >= bhoehe - rad){
             richt = richtUmkehren( Border.BOTTOM);
-            st.dreheBis(richt);
+            moveBy(weite+rad*2, richt);
             bo = true;
-            st.bewegeUm(weite+rad*2);
         }
         else if (x <= rad){
             richt = richtUmkehren( Border.LEFT);
-            st.dreheBis(richt);
             le = true;
-            st.bewegeUm(weite+rad*2);
+            moveBy(weite+rad*2, richt);
         }
         else if (y <= rad){
             richt = richtUmkehren( Border.TOP);
-            st.dreheBis(richt);
             to = true;
-            st.bewegeUm(weite+rad*2);
-
+            moveBy(weite+rad*2, richt);
         }
         else {
             ri = false;
@@ -61,16 +57,16 @@ public class GuteKugel extends Kugel {
             bo = false;
         }
 
-        st.normal();
         draw();
 
     }
 
     public void draw(){
-        st.bewegeBis(x,y);
-        //if(!(x<0-this.rad||y<0-this.rad||x>bs.breite()+this.rad||y>bs.breite()+this.rad)){
-        st.zeichneKreis(rad);
-        //}
+    }
+
+    private void moveBy(double weite, double richt){
+        x = x + Math.cos(Math.toRadians(richt))*weite;
+        y = y + Math.sin(Math.toRadians(richt))*weite;
     }
 
     private double richtUmkehren( Border b){

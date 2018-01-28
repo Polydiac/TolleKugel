@@ -1,14 +1,14 @@
 package util
 
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.experimental.*
 import java.lang.reflect.Type
 import java.net.DatagramPacket
 import java.net.DatagramSocket
 import java.net.InetAddress
 import java.util.*
-import java.util.concurrent.Future
+import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
 val GLOBALSOCKETOUT = 4568
 val GLOBALSOCKETIN = 4569
@@ -21,8 +21,9 @@ object ServerNetworkManager {
     val sockets: HashMap<Int, Connection> = HashMap<Int, Connection>()
     val gson = Gson()
     val socket = DatagramSocket(GLOBALSOCKETIN)
-    val pooledActions = ArrayList<Movement>()
+    val pooledActions = Stack<Packet<Movement>>()
     var accepting = true
+    var currentMoves = HashMap<UUID, ArrayList<Movement>>()
 
     fun sendToAll(state: Packet<GameState>) {
         val msg = state.serialize()
@@ -31,13 +32,21 @@ object ServerNetworkManager {
         }
     }
 
-    fun dispatchActions(): ArrayList<Movement> {
-        val returnList = ArrayList<Movement>()
+    fun getMovementsForUser(uuid: UUID): ArrayList<Movement>? {
+        return currentMoves[uuid]
+    }
+
+    fun dispatchActions() {
+        val returnList = ArrayList<Packet<Movement>>()
         for (action in pooledActions) {
             returnList.add(action)
         }
         pooledActions.clear()
-        return returnList
+        currentMoves.clear()
+        for(pak in returnList) {
+            currentMoves.putIfAbsent(pak.sender, ArrayList())
+            currentMoves[pak.sender]?.add(pak.content)
+        }
     }
 
     fun registerReceivingSocket(con: Connection) : Int {
@@ -57,20 +66,20 @@ object ServerNetworkManager {
 
     }
 
-    fun receivePacket(expectType: Type): Movement{
+    fun receivePacket(expectType: Type): Packet<Movement>{
         val packet = DatagramPacket(ByteArray(32768), 32768)
 
         socket.receive(packet)
         val action = gson.fromJson<Packet<Movement>>(packet.data.toString(), expectType)
 
-        return action.content
+        return action
     }
 }
 
 object ClientNetworkManager{
     var serverCon = Connection()
     val gson = Gson()
-    val states = ArrayList<GameState>()
+    val states = Stack<GameState>()
     var running = true
     val socket = DatagramSocket(GLOBALSOCKETOUT)
 
@@ -102,7 +111,7 @@ object ClientNetworkManager{
     }
 
     fun getGameState(): GameState {
-        val lastState = states.last()
+        val lastState = states.first()
         states.clear()
         return lastState
     }
@@ -123,6 +132,3 @@ class Connection constructor(val ipAdress: String = "0.0.0.0"){
     }
 
 }
-
-
-

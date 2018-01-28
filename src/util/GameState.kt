@@ -2,11 +2,11 @@ package util
 
 import com.google.gson.Gson
 import gameObjects.BoeseKugel
-import gameObjects.GuteKugel
-import gameObjects.Score
+import gameObjects.GuteKugelImpl
+import gameObjects.ScoreImpl
 import java.util.*
 
-data class GameState(var kugeln: Array<GuteKugel>, var players: Array<BoeseKugel>, var score: Array<Score>) {
+data class GameState(var kugeln: Array<GuteKugelImpl>, var players: Array<BoeseKugel>, var score: Array<ScoreImpl>) {
     fun update(frame:Int){
         ServerNetworkManager.sendToAll(Packet<GameState>(type = ActionEnum.GAMESTATE, content = this))
     }
@@ -14,7 +14,7 @@ data class GameState(var kugeln: Array<GuteKugel>, var players: Array<BoeseKugel
 
 class Movement(var direction:Vector2D)
 
-class Packet<T>(val type: ActionEnum, val time:Long = System.currentTimeMillis(), sender: UUID = User.uuid, val content:T) {
+data class Packet<T>(val type: ActionEnum, val time:Long = System.currentTimeMillis(), val sender: UUID = User.uuid, val content:T) {
     fun serialize(): String {
         return Gson().toJson(this)
     }

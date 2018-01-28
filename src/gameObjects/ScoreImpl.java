@@ -1,25 +1,28 @@
 package gameObjects;
 
-import sum.kern.Buntstift;
+import java.awt.Color;
 
-import java.awt.*;
-
+import sum.kern.*;
 /**
  * Beschreiben Sie hier die Klasse gameObjects.ScoreImpl.
  * 
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Score
+public class ScoreImpl
 {
     int score = 0;
     double x,y;
     Color colour;
-
-    public Score(double px, double py, Color c, int pSchriftgroesse){
+    Buntstift st;
+    
+    public ScoreImpl(double px, double py, Color c, int pSchriftgroesse){
         x = px;
         y = py;
-
+        st = new Buntstift();
+        st.setzeFarbe(c);
+        st.setzeSchriftgroesse(pSchriftgroesse);
+        
     }
     public void setScore(int sc){
         score = sc;
@@ -28,7 +31,12 @@ public class Score
         score ++;
     }
     public void draw(){
+        st.bewegeBis(x,y);
+        st.schreibeZahl(score);
     }
     public void del(){
+        st.radiere();
+        draw();
+        st.normal();
     }
 }

@@ -1,29 +1,29 @@
 import gameObjects.BoeseKugel;
-import gameObjects.GuteKugel;
-import gameObjects.Score;
-import sum.kern.*;
+import gameObjects.GuteKugelImpl;
+import gameObjects.ScoreImpl;
+import sum.kern.Fenster;
 import util.GameState;
 
+import java.awt.*;
 import java.util.Random;
-import java.awt.Color;
 
 /**
  * Created by Sören on 30.03.2017.
  */
-public class Game extends DrawThread{
+public class Server{
     GameState state;
     int spawnEntities;
 
     public void init(){
 
-        Score[] scoreboards = new Score[2];
+        ScoreImpl[] scoreboards = new ScoreImpl[2];
         spawnEntities = 2000;
         BoeseKugel[] players = new BoeseKugel[2];
         players[0] = new BoeseKugel(30,500, 500, 20, Color.BLACK, this.bs, this.kb, 'w', 's', 'a', 'd');
         players[1] = new BoeseKugel(30,500, 500, 20, Color.BLACK, this.bs, this.kb, 'u', 'j', 'h', 'k');
-        GuteKugel[] kugeln = getKugelArray(spawnEntities, this.bs);
+        GuteKugelImpl[] kugeln = getKugelArray(spawnEntities, this.bs);
         for(int i = 0; i <scoreboards.length;i++){
-            scoreboards[i] = new Score(900, (i+1)*40, Color.GREEN, 25);
+            scoreboards[i] = new ScoreImpl(900, (i+1)*40, Color.GREEN, 25);
         }
         state = new GameState(kugeln, players, scoreboards);
 
@@ -79,7 +79,7 @@ public class Game extends DrawThread{
         if(frame%1==0){
             for(int i = 0; i< state.getKugeln().length;i++){
                 if(state.getKugeln()[i].hide) {
-                    state.getKugeln()[i] = new GuteKugel(5 + rnd.nextInt(50), rnd.nextDouble() * bs.breite(), rnd.nextDouble() * bs.hoehe(), rnd.nextInt(360), rnd.nextDouble() * 10, new Color(rnd.nextInt(255), rnd.nextInt(255), rnd.nextInt(255)), bs);
+                    state.getKugeln()[i] = new GuteKugelImpl(5 + rnd.nextInt(50), rnd.nextDouble() * bs.breite(), rnd.nextDouble() * bs.hoehe(), rnd.nextInt(360), rnd.nextDouble() * 10, new Color(rnd.nextInt(255), rnd.nextInt(255), rnd.nextInt(255)), bs);
                 }
             }
         }
@@ -100,14 +100,14 @@ public class Game extends DrawThread{
     }
 
     public static void main(String[]args){
-        new Game();
+        new Server();
     }
 
-    public static GuteKugel[] getKugelArray(int kugelCount, Fenster pbs){
+    public static GuteKugelImpl[] getKugelArray(int kugelCount, Fenster pbs){
         Random rnd = new Random(System.currentTimeMillis());
-        GuteKugel[] kugeln = new GuteKugel[kugelCount];
+        GuteKugelImpl[] kugeln = new GuteKugelImpl[kugelCount];
         for(int i = 0; i<kugeln.length;i++){
-            kugeln[i] = new GuteKugel(5+rnd.nextInt(50),rnd.nextDouble()*pbs.breite(),rnd.nextDouble()*pbs.hoehe(), rnd.nextInt(360), rnd.nextDouble()*10,new Color(rnd.nextInt(255), rnd.nextInt(255), rnd.nextInt(255)) , pbs);
+            kugeln[i] = new GuteKugelImpl(5+rnd.nextInt(50),rnd.nextDouble()*pbs.breite(),rnd.nextDouble()*pbs.hoehe(), rnd.nextInt(360), rnd.nextDouble()*10,new Color(rnd.nextInt(255), rnd.nextInt(255), rnd.nextInt(255)) , pbs);
         }
         return kugeln;
     }
